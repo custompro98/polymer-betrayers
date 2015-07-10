@@ -1,1 +1,1 @@
-# polymer-character-card
+# Polymer Character Card
