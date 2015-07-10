@@ -1,0 +1,29 @@
+body {
+	background-image: url("images/stardust.png");
+}
+
+h4 {
+	color: #CCC;
+}
+
+#character-picker {
+
+}
+
+#character-card {
+	/*visibility: hidden;*/
+}
+
+#fronts {
+	float: left;
+}
+
+#backs {
+	float: left;
+	clear: right;
+}
+
+paper-radio-button {
+	display: block;
+	color: #CCC;
+}

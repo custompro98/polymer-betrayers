@@ -1,0 +1,104 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="../bower_components/core-icon/core-icon.html">
+
+<polymer-element name="character-card">
+	<template>
+		<style>
+			core-header-panel {
+				float: left;
+				width: 30%;
+				height: 400px;
+				margin: 5px;
+			}
+
+			.core-header {
+				height: 60px;
+				line-height: 60px;
+				font-size: 18px;
+				padding: 0 10px;
+				background: #333;
+				color: #FFF;
+				transition: height 0.2s;
+			}
+
+			.content {
+				height: 340px;
+				background: #555;
+			}
+
+			.trait {
+				display: block;
+			}
+		</style>
+
+		<core-header-panel mode="seamed">
+    		<div class="core-header" id="character-name"></div>
+    		<div class="content" id="character-stats">
+    			<div id="physical">
+    				<div class="trait">
+	    				<span>Might: </span><span id="might-score"></span>
+    				</div>
+    				<div class="trait">
+	    				<span>Speed: </span><span id="speed-score"></span>
+    				</div>
+    			</div>
+    			<div id="mental">
+    				<div class="trait">
+	    				<span>Knowledge: </span><span id="knowledge-score"></span>
+    				</div>
+    				<div class="trait">
+	    				<span>Sanity: </span><span id="sanity-score"></span>
+    				</div>
+    			</div>
+    		</div>
+  		</core-header-panel>
+	</template>
+
+	<script>
+	Polymer('character-card', {
+		getCharacter: function(character) {
+			var characters = [
+				"ox-bellows",
+				"father-rhinehardt",
+				"vivian-lopez",
+				"peter-akimoto",
+				"missy-ddobourde",
+				"jenny-leclerc",
+				"darrin-flash-williams",
+				"professor-longfellow",
+				"madame-zostra",
+				"brandon-jaspers",
+				"zoe-ingstrom",
+				"heather-granville"
+			]
+
+			request = new XMLHttpRequest();
+			request.open('GET', '../characters.json', true);
+
+			request.onload = function() {
+				if(request.status >= 200 && request.status < 400) {
+					data = JSON.parse(request.responseText);
+				} else {
+					console.log("Failed.");
+				}
+			};
+
+			request.onerror = function() {
+				console.log("Failed.");
+			};
+
+			selection = data.Characters[characters.indexOf(character)]
+			this.$["character-name"].textContent = selection.Name;
+			this.$["might-score"].textContent = selection.Might[BaseMightIndex];
+			this.$["speed-score"].textContent = selection.Speed[BaseSpeedIndex];
+			this.$["knowledge-score"].textContent = selection.Knowledge[BaseKnowledgeIndex];
+			this.$["sanity-score"].textContent = selection.Sanity[BaseSanityIndex];
+		},
+
+		attached: function() {
+			this.getCharacter("professor-longfellow");
+		},
+	});
+	</script>
+</polymer-element>#2F405A

@@ -1,0 +1,196 @@
+{
+	"Characters": [
+		{
+			"Name" : "Ox Bellows",
+			"Age" : "23",
+			"Height" : "6'4",
+			"Weight" : "288",
+			"Hobbies" : "Football, Shiny Objects",
+			"Birthday" : "October 18th",
+			"Speed" : [0,2,2,2,3,4,5,5,6],
+			"Might" : [0,4,5,5,6,6,7,8,8],
+			"Sanity" : [0,2,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"BaseSpeedIndex" : 5,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Father Rhinehardt",
+			"Age" : "62",
+			"Height" : "5'9",
+			"Weight" : "185",
+			"Hobbies" : "Fencing, Gardening",
+			"Birthday" : "April 29th",
+			"Speed" : [0,2,3,3,4,5,6,7,7],
+			"Might" : [0,1,2,2,4,4,5,5,7],
+			"Sanity" : [0,3,4,5,5,6,7,7,8],
+			"Knowledge" : [0,1,3,3,4,5,6,6,8],
+			"BaseSpeedIndex" : 3,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 6,
+			"BaseKnowledgeIndex" : 4
+		}
+		{
+			"Name" : "Vivian Lopez",
+			"Age" : "42",
+			"Height" : "5'5",
+			"Weight" : "142",
+			"Hobbies" : "Old Movies, Horses",
+			"Birthday" : "January 11th",
+			"Speed" : [0,3,4,4,4,4,6,7,8],
+			"Might" : [0,2,2,2,4,4,5,6,6],
+			"Sanity" : [0,4,4,4,5,6,7,8,8],
+			"Knowledge" : [0,4,5,5,5,5,6,6,7],
+			"BaseSpeedIndex" : 4,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 4
+		}
+		{
+			"Name" : "Peter Akimoto",
+			"Age" : "13",
+			"Height" : "4'11",
+			"Weight" : "98",
+			"Hobbies" : "Bugs, Basketball",
+			"Birthday" : "September 3rd",
+			"Speed" : [0,3,3,3,4,6,6,7,7],
+			"Might" : [0,2,3,3,4,5,5,6,8],
+			"Sanity" : [0,3,4,4,4,5,6,6,7],
+			"Knowledge" : [0,3,4,4,5,6,7,7,8],
+			"BaseSpeedIndex" : 4,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" :4,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Missy Dubourde",
+			"Age" : "9",
+			"Height" : "4'2",
+			"Weight" : "62",
+			"Hobbies" : "Swimming, Medicine",
+			"Birthday" : "February 14th",
+			"Speed" : [0,3,4,5,6,6,6,7,7],
+			"Might" : [0,2,3,3,3,4,5,6,7],
+			"Sanity" : [0,1,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,3,4,4,5,6,6,6],
+			"BaseSpeedIndex" : 3,
+			"BaseMightIndex" : 4,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 4
+		}
+		{
+			"Name" : "Jenny LeClerc",
+			"Age" : "21",
+			"Height" : "5'7",
+			"Weight" : "142",
+			"Hobbies" : "Reading, Soccer",
+			"Birthday" : "March 4th",
+			"Speed" : [0,2,3,4,4,4,5,6,8],
+			"Might" : [0,3,4,4,4,4,5,6,8],
+			"Sanity" : [0,1,1,2,4,4,4,5,6],
+			"Knowledge" : [0,2,3,3,4,4,5,6,8],
+			"BaseSpeedIndex" : 4,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 5,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Ox Bellows",
+			"Age" : "23",
+			"Height" : "6'4",
+			"Weight" : "288",
+			"Hobbies" : "Football, Shiny Objects",
+			"Birthday" : "October 18th",
+			"Speed" : [0,2,2,2,3,4,5,5,6],
+			"Might" : [0,4,5,5,6,6,7,8,8],
+			"Sanity" : [0,2,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"BaseSpeedIndex" : 5,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Ox Bellows",
+			"Age" : "23",
+			"Height" : "6'4",
+			"Weight" : "288",
+			"Hobbies" : "Football, Shiny Objects",
+			"Birthday" : "October 18th",
+			"Speed" : [0,2,2,2,3,4,5,5,6],
+			"Might" : [0,4,5,5,6,6,7,8,8],
+			"Sanity" : [0,2,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"BaseSpeedIndex" : 5,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Ox Bellows",
+			"Age" : "23",
+			"Height" : "6'4",
+			"Weight" : "288",
+			"Hobbies" : "Football, Shiny Objects",
+			"Birthday" : "October 18th",
+			"Speed" : [0,2,2,2,3,4,5,5,6],
+			"Might" : [0,4,5,5,6,6,7,8,8],
+			"Sanity" : [0,2,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"BaseSpeedIndex" : 5,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Ox Bellows",
+			"Age" : "23",
+			"Height" : "6'4",
+			"Weight" : "288",
+			"Hobbies" : "Football, Shiny Objects",
+			"Birthday" : "October 18th",
+			"Speed" : [0,2,2,2,3,4,5,5,6],
+			"Might" : [0,4,5,5,6,6,7,8,8],
+			"Sanity" : [0,2,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"BaseSpeedIndex" : 5,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Ox Bellows",
+			"Age" : "23",
+			"Height" : "6'4",
+			"Weight" : "288",
+			"Hobbies" : "Football, Shiny Objects",
+			"Birthday" : "October 18th",
+			"Speed" : [0,2,2,2,3,4,5,5,6],
+			"Might" : [0,4,5,5,6,6,7,8,8],
+			"Sanity" : [0,2,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"BaseSpeedIndex" : 5,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 3
+		}
+		{
+			"Name" : "Ox Bellows",
+			"Age" : "23",
+			"Height" : "6'4",
+			"Weight" : "288",
+			"Hobbies" : "Football, Shiny Objects",
+			"Birthday" : "October 18th",
+			"Speed" : [0,2,2,2,3,4,5,5,6],
+			"Might" : [0,4,5,5,6,6,7,8,8],
+			"Sanity" : [0,2,2,3,4,5,5,6,7],
+			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"BaseSpeedIndex" : 5,
+			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 3
+		}
+	]
+}

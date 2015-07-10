@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		<title>Betrayal at the House on the Hill</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+		<link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+		<link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+		<link rel="import" href="elements/character-card.html">
+	</head>
+	<body unresolved>
+		<div id="character-picker">
+			<h4>Choose a character</h4>
+			<paper-radio-group selected="ox-bellows">
+				<!-- <div id="fronts">			 -->
+					<paper-radio-button name="ox-bellows" label="Ox Bellows"></paper-radio-button>
+					<paper-radio-button name="father-rhinehardt" label="Father Rhinehardt"></paper-radio-button>
+					<paper-radio-button name="vivian-lopez" label="Vivian Lopez"></paper-radio-button>
+					<paper-radio-button name="peter_akimoto" label="Peter Akimoto"></paper-radio-button>
+					<paper-radio-button name="missy-dobourde" label="Missy Dobourde"></paper-radio-button>
+					<paper-radio-button name="jenny-leclerc" label="Jenny LeClerc"></paper-radio-button>
+				<!-- </div> -->
+				<!-- <div id="backs"> -->
+					<paper-radio-button name="darrin-flash-williams" label='Darrin "Flash" Williams'></paper-radio-button>
+					<paper-radio-button name="professor-longfellow" label="Professor Longfellow"></paper-radio-button>
+					<paper-radio-button name="madame-zostra" label="Madame Zostra"></paper-radio-button>
+					<paper-radio-button name="brandon-jaspers" label="Brandon Jaspers"></paper-radio-button>
+					<paper-radio-button name="zoe-ingstrom" label="Zoe Ingstrom"></paper-radio-button>
+					<paper-radio-button name="heather-granville" label="Heather Granville"></paper-radio-button>
+				  <!-- </div> -->
+			</paper-radio-group>
+		</div>
+		<div id="character-card">
+			<character-card></character-card>
+		</div>
+	</body>
+</html>
