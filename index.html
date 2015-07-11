@@ -5,17 +5,22 @@
 		<title>Betrayal at the House on the Hill</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 		
-		<link href="style.css" rel="stylesheet" type="text/css">
 		<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+		<link href="default.css" rel="stylesheet" type="text/css">
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<link href="index-small.css" rel="stylesheet" type="text/css">
 
 		<link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
 		<link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
-		<link rel="import" href="elements/character-card.html">
+		<link rel="import" href="elements/character-card/character-card.html">
+
+		<script src="index.js"></script>
 	</head>
 	<body unresolved>
 		<div id="character-picker">
 			<h4>Choose a character</h4>
-			<paper-radio-group selected="ox-bellows">
+			<paper-radio-group onchange="test()">
 				<!-- <div id="fronts">			 -->
 					<paper-radio-button name="ox-bellows" label="Ox Bellows"></paper-radio-button>
 					<paper-radio-button name="father-rhinehardt" label="Father Rhinehardt"></paper-radio-button>

@@ -1,4 +1,9 @@
+html {
+	height: 100%;
+}
+
 body {
+	height: 100%;
 	background-image: url("images/stardust.png");
 	font-family: RobotoDraft, Helvetica, Arial;
 }
@@ -8,13 +13,7 @@ h4 {
 }
 
 #character-picker {
-
-}
-
-#character-card {
 	display: none;
-	width: 30%;
-	margin: 0 auto;
 }
 
 #fronts {
@@ -29,4 +28,17 @@ h4 {
 paper-radio-button {
 	display: block;
 	color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (min-width: 480px) {
+	body {
+		padding: 10px;
+	}
+
+	#character-card {
+		/*visibility: hidden;*/
+		/*height: 400px;*/
+		width: 475px;
+		margin: 0 auto;
+	}
 }

@@ -1,0 +1,34 @@
+core-header-panel {
+	float: left;
+	width: 100%;
+	height: 400px;
+	height: 100vh;
+}
+
+.core-header {
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	padding: 0 10px;
+	background: #333;
+	color: rgba(255, 255, 255, 1.0);
+	transition: height 0.2s;
+}
+
+.content {
+	padding-top: -60px;
+	height: 340px;
+	background: #FFFFFF;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 480px) {
+	.content {
+		height: 100vh;
+		padding-top: -60px;
+	}
+}
+
+.trait {
+	display: block;
+}

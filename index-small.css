@@ -1,0 +1,13 @@
+@media screen and (max-width: 480px) {
+	body {
+		height: 100vh;
+	}
+
+	#character-card {
+		/*visibility: hidden;*/
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
