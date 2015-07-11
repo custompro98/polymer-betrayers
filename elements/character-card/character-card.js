@@ -67,7 +67,7 @@ Polymer('character-card', {
 		this.setHeader(character);
 
 		request = new XMLHttpRequest();
-		request.open("GET", "/elements/character-card/characters.json", true);
+		request.open("GET", "/polymer-character-card/elements/character-card/characters.json", true);
 
 		response = "";
 		request.onreadystatechange = function() {
