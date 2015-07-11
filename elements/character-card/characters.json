@@ -16,7 +16,7 @@
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 3,
 			"Image" : ""
-		}
+		},
 		{
 			"Name" : "Father Rhinehardt",
 			"Age" : "62",
@@ -33,7 +33,7 @@
 			"BaseSanityIndex" : 6,
 			"BaseKnowledgeIndex" : 4,
 			"Image" : ""
-		}
+		},
 		{
 			"Name" : "Vivian Lopez",
 			"Age" : "42",
@@ -50,7 +50,7 @@
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 4,
 			"Image" : ""
-		}
+		},
 		{
 			"Name" : "Peter Akimoto",
 			"Age" : "13",
@@ -67,7 +67,7 @@
 			"BaseSanityIndex" :4,
 			"BaseKnowledgeIndex" : 3,
 			"Image" : ""			
-		}
+		},
 		{
 			"Name" : "Missy Dubourde",
 			"Age" : "9",
@@ -84,7 +84,7 @@
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 4,
 			"Image" : ""
-		}
+		},
 		{
 			"Name" : "Jenny LeClerc",
 			"Age" : "21",
@@ -101,107 +101,107 @@
 			"BaseSanityIndex" : 5,
 			"BaseKnowledgeIndex" : 3,
 			"Image" : ""
-		}
+		},
 		{
-			"Name" : "Ox Bellows",
-			"Age" : "23",
-			"Height" : "6'4",
-			"Weight" : "288",
-			"Hobbies" : "Football, Shiny Objects",
-			"Birthday" : "October 18th",
-			"Speed" : [0,2,2,2,3,4,5,5,6],
-			"Might" : [0,4,5,5,6,6,7,8,8],
-			"Sanity" : [0,2,2,3,4,5,5,6,7],
-			"Knowledge" : [0,2,2,3,3,5,5,6,6],
+			"Name" : "Darrin 'Flash' Williams",
+			"Age" : "20",
+			"Height" : "5'11",
+			"Weight" : "188",
+			"Hobbies" : "Track, Music, Shakespearean Literature",
+			"Birthday" : "June 6th",
+			"Speed" : [0,4,4,4,5,6,7,7,8],
+			"Might" : [0,2,3,3,4,5,6,6,7],
+			"Sanity" : [0,1,2,3,4,5,5,5,7],
+			"Knowledge" : [0,2,3,3,4,5,5,5,7],
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 3,
 			"Image" : ""
-		}
+		},
 		{
-			"Name" : "Ox Bellows",
-			"Age" : "23",
-			"Height" : "6'4",
-			"Weight" : "288",
-			"Hobbies" : "Football, Shiny Objects",
-			"Birthday" : "October 18th",
-			"Speed" : [0,2,2,2,3,4,5,5,6],
-			"Might" : [0,4,5,5,6,6,7,8,8],
-			"Sanity" : [0,2,2,3,4,5,5,6,7],
-			"Knowledge" : [0,2,2,3,3,5,5,6,6],
-			"BaseSpeedIndex" : 5,
+			"Name" : "Professor Longfellow",
+			"Age" : "57",
+			"Height" : "5'11",
+			"Weight" : "153",
+			"Hobbies" : "Gaelic Music, Drama, Fine Wines",
+			"Birthday" : "July 27th",
+			"Speed" : [0,2,2,4,4,5,5,6,6],
+			"Might" : [0,1,2,3,4,5,5,6,6],
+			"Sanity" : [0,1,3,3,4,5,5,6,7],
+			"Knowledge" : [0,4,5,5,5,5,6,7,8],
+			"BaseSpeedIndex" : 4,
 			"BaseMightIndex" : 3,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 5,
+			"Image" : ""
+		},
+		{
+			"Name" : "Madame Zostra",
+			"Age" : "37",
+			"Height" : "5'0",
+			"Weight" : "150",
+			"Hobbies" : "Astrology, Cooking, Baseball",
+			"Birthday" : "December 10th",
+			"Speed" : [0,2,3,3,5,5,6,6,7],
+			"Might" : [0,2,3,3,4,5,5,5,6],
+			"Sanity" : [0,4,4,4,5,6,7,8,8],
+			"Knowledge" : [0,1,3,4,4,4,5,6,6],
+			"BaseSpeedIndex" : 3,
+			"BaseMightIndex" : 4,
+			"BaseSanityIndex" : 3,
+			"BaseKnowledgeIndex" : 4,
+			"Image" : ""
+		},
+		{
+			"Name" : "Brandon Jaspers",
+			"Age" : "12",
+			"Height" : "5'1",
+			"Weight" : "109",
+			"Hobbies" : "Computers, Camping, Hockey",
+			"Birthday" : "May 21st",
+			"Speed" : [0,3,4,4,4,5,6,7,8],
+			"Might" : [0,2,3,3,4,5,6,6,7],
+			"Sanity" : [0,3,3,3,4,5,6,7,8],
+			"Knowledge" : [0,1,3,3,5,5,6,6,7],
+			"BaseSpeedIndex" : 3,
+			"BaseMightIndex" : 4,
+			"BaseSanityIndex" : 4,
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
+		},
+		{
+			"Name" : "Zoe Ingstrom",
+			"Age" : "8",
+			"Height" : "3'9",
+			"Weight" : "49",
+			"Hobbies" : "Dolls, Music",
+			"Birthday" : "October 18th",
+			"Speed" : [0,4,4,4,4,5,6,8,8],
+			"Might" : [0,2,2,3,3,4,4,6,7],
+			"Sanity" : [0,3,4,5,5,6,6,7,8],
+			"Knowledge" : [0,1,2,3,4,4,5,5,5],
+			"BaseSpeedIndex" : 4,
+			"BaseMightIndex" : 4,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 3,
 			"Image" : ""
-		}
+		},
 		{
-			"Name" : "Ox Bellows",
-			"Age" : "23",
-			"Height" : "6'4",
-			"Weight" : "288",
-			"Hobbies" : "Football, Shiny Objects",
-			"Birthday" : "October 18th",
-			"Speed" : [0,2,2,2,3,4,5,5,6],
-			"Might" : [0,4,5,5,6,6,7,8,8],
-			"Sanity" : [0,2,2,3,4,5,5,6,7],
-			"Knowledge" : [0,2,2,3,3,5,5,6,6],
-			"BaseSpeedIndex" : 5,
+			"Name" : "Heather Granville",
+			"Age" : "`18",
+			"Height" : "5'2",
+			"Weight" : "120",
+			"Hobbies" : "Television, Shopping",
+			"Birthday" : "August 2nd",
+			"Speed" : [0,3,3,4,5,6,6,7,8],
+			"Might" : [0,3,3,3,4,5,6,7,8],
+			"Sanity" : [0,3,3,3,4,5,6,6,6],
+			"Knowledge" : [0,2,3,3,4,5,6,7,8],
+			"BaseSpeedIndex" : 3,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
-		}
-		{
-			"Name" : "Ox Bellows",
-			"Age" : "23",
-			"Height" : "6'4",
-			"Weight" : "288",
-			"Hobbies" : "Football, Shiny Objects",
-			"Birthday" : "October 18th",
-			"Speed" : [0,2,2,2,3,4,5,5,6],
-			"Might" : [0,4,5,5,6,6,7,8,8],
-			"Sanity" : [0,2,2,3,4,5,5,6,7],
-			"Knowledge" : [0,2,2,3,3,5,5,6,6],
-			"BaseSpeedIndex" : 5,
-			"BaseMightIndex" : 3,
-			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
-		}
-		{
-			"Name" : "Ox Bellows",
-			"Age" : "23",
-			"Height" : "6'4",
-			"Weight" : "288",
-			"Hobbies" : "Football, Shiny Objects",
-			"Birthday" : "October 18th",
-			"Speed" : [0,2,2,2,3,4,5,5,6],
-			"Might" : [0,4,5,5,6,6,7,8,8],
-			"Sanity" : [0,2,2,3,4,5,5,6,7],
-			"Knowledge" : [0,2,2,3,3,5,5,6,6],
-			"BaseSpeedIndex" : 5,
-			"BaseMightIndex" : 3,
-			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
-		}
-		{
-			"Name" : "Ox Bellows",
-			"Age" : "23",
-			"Height" : "6'4",
-			"Weight" : "288",
-			"Hobbies" : "Football, Shiny Objects",
-			"Birthday" : "October 18th",
-			"Speed" : [0,2,2,2,3,4,5,5,6],
-			"Might" : [0,4,5,5,6,6,7,8,8],
-			"Sanity" : [0,2,2,3,4,5,5,6,7],
-			"Knowledge" : [0,2,2,3,3,5,5,6,6],
-			"BaseSpeedIndex" : 5,
-			"BaseMightIndex" : 3,
-			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3,
+			"BaseKnowledgeIndex" : 5,
 			"Image" : ""
 		}
 	]

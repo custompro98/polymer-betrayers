@@ -1,4 +1,6 @@
 Polymer('character-card', {
+	response: "",
+
 	setHeader: function(character) {
 		switch(character) {
 			case "ox-bellows":
@@ -30,8 +32,8 @@ Polymer('character-card', {
 		document.querySelector("character-card::shadow #character-name").style.backgroundColor = color;
 	},
 
-	getCharacter: function(character) {
-		var characters = [
+	setCardValues: function(character) {
+		characters = [
 				"ox-bellows",
 				"father-rhinehardt",
 				"vivian-lopez",
@@ -46,33 +48,42 @@ Polymer('character-card', {
 				"heather-granville"
 		]
 
+		selection = this.response.Characters[characters.indexOf(character)];
+		document.querySelector("character-card::shadow #character-name").innerHTML = selection.Name;
+		document.querySelector("character-card::shadow #age").innerHTML = selection.Age;
+		document.querySelector("character-card::shadow #height").innerHTML = selection.Height;
+		document.querySelector("character-card::shadow #weight").innerHTML = selection.Weight;
+		document.querySelector("character-card::shadow #birthday").innerHTML = selection.Birthday;
+		document.querySelector("character-card::shadow #hobbies").innerHTML = selection.Hobbies;
+		document.querySelector("character-card::shadow #might-score").innerHTML = selection.Might[selection.BaseMightIndex];
+		document.querySelector("character-card::shadow #speed-score").innerHTML = selection.Speed[selection.BaseSpeedIndex];
+		document.querySelector("character-card::shadow #knowledge-score").innerHTML = selection.Knowledge[selection.BaseKnowledgeIndex];
+		document.querySelector("character-card::shadow #sanity-score").innerHTML = selection.Sanity[selection.BaseSanityIndex];
+	},
+
+	getCharacter: function(character) {
+		self = this;
+
+		this.setHeader(character);
+
 		request = new XMLHttpRequest();
-		request.open("GET", "characters.json");
-		request.send();
-		// alert(request.status);
-		// alert(request.readyState);
-		request.onload = function() {
-			if(request.status >= 200 && request.status < 400) {
-				data = JSON.parse(request.responseText);
-			} else {
-				console.log("Failed.");
+		request.open("GET", "/elements/character-card/characters.json", true);
+
+		response = "";
+		request.onreadystatechange = function() {
+			if(request.readyState === request.DONE) {
+				status = request.status;
+
+				if((status >= 200 && status < 300) || status === 304 || status === 0) {
+					self.response = JSON.parse(request.responseText);
+					self.setCardValues(character);
+				}
 			}
 		};
-
-		request.onerror = function() {
-			console.log("Failed.");
-		};
-
-		selection = data.Characters[characters.indexOf(character)]
-		document.querySelector("character-card::shadow #character-name").innerHTML = selection.Name;
-		document.querySelector("character-card::shadow #might-score").innerHTML = selection.Might[BaseMightIndex];
-		document.querySelector("character-card::shadow #speed-score").innerHTML = selection.Speed[BaseSpeedIndex];
-		document.querySelector("character-card::shadow #knowledge-score").innerHTML = selection.Knowledge[BaseKnowledgeIndex];
-		document.querySelector("character-card::shadow #sanity-score").innerHTML = selection.Sanity[BaseSanityIndex];
+		request.send();
 	},
 
 	attached: function() {
-		this.setHeader("vivian-lopez");
-		this.getCharacter("professor-longfellow");
+		this.getCharacter("darrin-flash-williams");
 	},
 });
