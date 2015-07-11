@@ -6,12 +6,27 @@
 	<template>
 		<link href="character-card.css" rel="stylesheet" type="text/css">
 
-		<core-header-panel mode="seamed">
+		<core-header-panel>
     		<div class="core-header" id="character-name">Name Here</div>
     		<div class="content" id="character-stats">
                 <div id="profile-pic">
                 </div>
                 <div id="vitals">
+                    <div class="trait">
+                        <span>Age: </span><span id="age"></span>
+                    </div>
+                    <div class="trait">
+                        <span>Height: </span><span id="height"></span>
+                    </div>
+                    <div class="trait">
+                        <span>Weight: </span><span id="weight"></span>
+                    </div>
+                    <div class="trait">
+                        <span>Birthday: </span><span id="birthday"></span>
+                    </div>
+                </div>
+                <div class="trait" id="hobbies">
+                    <span>Hobbies: </span><span id="hobbies"></span>
                 </div>
     			<div id="physical">
     				<div class="trait">

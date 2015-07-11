@@ -14,7 +14,8 @@
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 		{
 			"Name" : "Father Rhinehardt",
@@ -30,7 +31,8 @@
 			"BaseSpeedIndex" : 3,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 6,
-			"BaseKnowledgeIndex" : 4
+			"BaseKnowledgeIndex" : 4,
+			"Image" : ""
 		}
 		{
 			"Name" : "Vivian Lopez",
@@ -46,7 +48,8 @@
 			"BaseSpeedIndex" : 4,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 4
+			"BaseKnowledgeIndex" : 4,
+			"Image" : ""
 		}
 		{
 			"Name" : "Peter Akimoto",
@@ -62,7 +65,8 @@
 			"BaseSpeedIndex" : 4,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" :4,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""			
 		}
 		{
 			"Name" : "Missy Dubourde",
@@ -78,7 +82,8 @@
 			"BaseSpeedIndex" : 3,
 			"BaseMightIndex" : 4,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 4
+			"BaseKnowledgeIndex" : 4,
+			"Image" : ""
 		}
 		{
 			"Name" : "Jenny LeClerc",
@@ -94,7 +99,8 @@
 			"BaseSpeedIndex" : 4,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 5,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 		{
 			"Name" : "Ox Bellows",
@@ -110,7 +116,8 @@
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 		{
 			"Name" : "Ox Bellows",
@@ -126,7 +133,8 @@
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 		{
 			"Name" : "Ox Bellows",
@@ -142,7 +150,8 @@
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 		{
 			"Name" : "Ox Bellows",
@@ -158,7 +167,8 @@
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 		{
 			"Name" : "Ox Bellows",
@@ -174,7 +184,8 @@
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 		{
 			"Name" : "Ox Bellows",
@@ -190,7 +201,8 @@
 			"BaseSpeedIndex" : 5,
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
-			"BaseKnowledgeIndex" : 3
+			"BaseKnowledgeIndex" : 3,
+			"Image" : ""
 		}
 	]
 }

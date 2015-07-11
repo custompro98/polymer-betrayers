@@ -16,10 +16,31 @@ core-header-panel {
 }
 
 .content {
-	padding-top: -60px;
 	height: 340px;
+	padding: 5px;
 	background: #FFFFFF;
 	color: rgba(0, 0, 0, 0.7);
+}
+
+#profile-pic {
+	height: 128px;
+	width: 128px;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	background-color: green;
+}
+
+.trait {
+	display: block;
+}
+
+#vitals, #hobbies {
+	margin-bottom: 5px;
+}
+
+#vitals .trait {
+	line-height: 32px;
 }
 
 @media screen and (max-width: 480px) {
@@ -27,8 +48,4 @@ core-header-panel {
 		height: 100vh;
 		padding-top: -60px;
 	}
-}
-
-.trait {
-	display: block;
 }

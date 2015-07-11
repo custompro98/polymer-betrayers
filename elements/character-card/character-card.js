@@ -47,7 +47,7 @@ Polymer('character-card', {
 		]
 
 		request = new XMLHttpRequest();
-		request.open("GET", "characters.json", true);
+		request.open("GET", "characters.json");
 		request.send();
 		// alert(request.status);
 		// alert(request.readyState);
