@@ -15,60 +15,89 @@ Polymer('character-card', {
 		"SanityIndex":""
 	},
 
-	getStats: function() {
-		stats = {
-			"array":"",
-			"index":"",
-			"element":""
-		}
-
+	updateStat: function(attribute, direction) {
 		switch(attribute) {
 			case "might":
-				stats.array = this.character.Might;
-				stats.index = this.character.MightIndex;
-				stats.element = document.querySelector("character-card::shadow #might-score").innerHTML;
+				switch(direction) {
+					case "up":
+						console.log("up");
+						if(this.character.MightIndex < 8) {
+							document.querySelector("character-card::shadow #might-score").innerHTML = this.character.Might[++this.character.MightIndex];
+						}
+						break;
+					case "down":
+						console.log("down");
+						if(this.character.MightIndex > 0) {
+							document.querySelector("character-card::shadow #might-score").innerHTML = this.character.Might[--this.character.MightIndex];
+						}
+						if(!this.character.MightIndex) {
+							alert("You've died.");
+						}
+						break;
+				}
+				document.querySelector("character-card::shadow #might-index").innerHTML = this.character.MightIndex;
 				break;
 			case "speed":
-				stats.array = this.character.Speed;
-				stats.index = this.character.SpeedIndex;
-				stats.element = document.querySelector("character-card::shadow #speed-score").innerHTML;
+				switch(direction) {
+					case "up":
+						console.log("up");
+						if(this.character.SpeedIndex < 8) {
+							document.querySelector("character-card::shadow #speed-score").innerHTML = this.character.Speed[++this.character.SpeedIndex];
+						}
+						break;
+					case "down":
+						console.log("down");
+						if(this.character.SpeedIndex > 0) {
+							document.querySelector("character-card::shadow #speed-score").innerHTML = this.character.Speed[--this.character.SpeedIndex];
+						}
+						if(!this.character.SpeedIndex) {
+							alert("You've died.");
+						}
+						break;
+				}
+				document.querySelector("character-card::shadow #speed-index").innerHTML = this.character.SpeedIndex;
 				break;
 			case "knowledge":
-				stats.array = this.character.Knowledge;
-				stats.element = document.querySelector("character-card::shadow #knowledge-score").innerHTML;
-				stats.index = this.character.KnowledgeIndex;
+				switch(direction) {
+					case "up":
+						console.log("up");
+						if(this.character.KnowledgeIndex < 8) {
+							document.querySelector("character-card::shadow #knowledge-score").innerHTML = this.character.Knowledge[++this.character.KnowledgeIndex];
+						}
+						break;
+					case "down":
+						console.log("down");
+						if(this.character.KnowledgeIndex > 0) {
+							document.querySelector("character-card::shadow #knowledge-score").innerHTML = this.character.Knowledge[--this.character.KnowledgeIndex];
+						}
+						if(!this.character.KnowledgeIndex) {
+							alert("You've died.");
+						}
+						break;
+				}
+				document.querySelector("character-card::shadow #knowledge-index").innerHTML = this.character.KnowledgeIndex;
 				break;
 			case "sanity":
-				stats.array = this.character.Sanity;
-				stats.index = this.character.SanityIndex;
-				stats.element = document.querySelector("character-card::shadow #sanity-score").innerHTML;
+				switch(direction) {
+					case "up":
+						console.log("up");
+						if(this.character.SanityIndex < 8) {
+							document.querySelector("character-card::shadow #sanity-score").innerHTML = this.character.Sanity[++this.character.SanityIndex];
+						}
+						break;
+					case "down":
+						console.log("down");
+						if(this.character.SanityIndex > 0) {
+							document.querySelector("character-card::shadow #sanity-score").innerHTML = this.character.Sanity[--this.character.SanityIndex];
+						}
+						if(!this.character.SanityIndex) {
+							alert("You've died.");
+						}
+						break;
+				}
+				document.querySelector("character-card::shadow #sanity-index").innerHTML = this.character.SanityIndex;
 				break;
-		}
-
-		// alert(this.stats.index);
-		return stats;
-	},
-
-	increaseScore: function(attribute) {
-		console.log("increase");
-		stats = this.getStats(attribute);
-		console.log(stats.index);
-		if(stats.index < 8) {
-			stats.element = stats.array[++stats.index];
-			console.log(stats.array[stats.index]);
-		}
-	},
-
-	decreaseScore: function(attribute) {
-		console.log("decrease");
-		stats = this.getStats(attribute);
-
-		if(--stats.index) {
-			stats.element = stats.array[stats.index];
-		}
-		else {
-			alert("You've died.");
-		}
+		}		
 	},
 
 	setHeader: function(character) {
@@ -132,6 +161,10 @@ Polymer('character-card', {
 		document.querySelector("character-card::shadow #speed-score").innerHTML = selection.Speed[selection.BaseSpeedIndex];
 		document.querySelector("character-card::shadow #knowledge-score").innerHTML = selection.Knowledge[selection.BaseKnowledgeIndex];
 		document.querySelector("character-card::shadow #sanity-score").innerHTML = selection.Sanity[selection.BaseSanityIndex];
+		document.querySelector("character-card::shadow #might-index").innerHTML = selection.BaseMightIndex;
+		document.querySelector("character-card::shadow #speed-index").innerHTML = selection.BaseSpeedIndex;
+		document.querySelector("character-card::shadow #knowledge-index").innerHTML = selection.BaseKnowledgeIndex;
+		document.querySelector("character-card::shadow #sanity-index").innerHTML = selection.BaseSanityIndex;		
 
 		this.character.Might = selection.Might;
 		this.character.Speed = selection.Speed;
@@ -168,15 +201,25 @@ Polymer('character-card', {
 	attached: function() {
 		self = this;
 
-		document.querySelector("character-card::shadow .up").addEventListener("click", function(event) {
-			attribute = event.target.attributes['name'].value;
-			self.increaseScore(attribute);			
-		});
+		ups = document.querySelectorAll("character-card::shadow .up");
 
-		document.querySelector("character-card::shadow .down").addEventListener("click", function(event) {
-			attribute = event.target.attributes['name'].value;
-			self.decreaseScore(attribute);			
-		});
+		for (var i = ups.length - 1; i >= 0; i--) {
+			ups[i].addEventListener("click", function(event) {
+				attribute = event.target.attributes['name'].value;
+				direction = event.target.attributes['class'].value;
+				self.updateStat(attribute, "up");
+			});
+		};
+
+		downs = document.querySelectorAll("character-card::shadow .down");
+
+		for (var i = downs.length - 1; i >= 0; i--) {
+			downs[i].addEventListener("click", function(event) {
+				attribute = event.target.attributes['name'].value;
+				direction = event.target.attributes['class'].value;
+				self.updateStat(attribute, "down");
+			});
+		};
 
 		this.getCharacter("darrin-flash-williams");
 	},
