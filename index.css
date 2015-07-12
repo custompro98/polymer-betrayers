@@ -30,15 +30,30 @@ paper-radio-button {
 	color: rgba(255, 255, 255, 0.7);
 }
 
+#character-card {
+	/*visibility: hidden;*/
+}
+
 @media screen and (min-width: 480px) {
 	body {
 		padding: 10px;
 	}
 
 	#character-card {
-		/*visibility: hidden;*/
-		/*height: 400px;*/
 		width: 475px;
 		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body {
+		height: 100vh;
+	}
+
+	#character-card {
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		width: 100%;
 	}
 }

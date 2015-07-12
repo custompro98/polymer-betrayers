@@ -1,5 +1,55 @@
+fullscreen = function() {
+	screenfull.toggle();
+}
+
 Polymer('character-card', {
 	response: "",
+	character: "",
+
+	getStats: function(attribute) {
+		stats = "";
+		switch(attribute) {
+			case "might":
+				stats.array = character.Might;
+				stats.index = character.MightIndex;
+				stats.element = document.querySelector("character-card::shadow #might-score").innerHTML;
+				break;
+			case "speed":
+				stats.array = character.Speed;
+				stats.element = document.querySelector("character-card::shadow #speed-score").innerHTML;
+				stats.index = character.SpeedIndex;
+				break;
+			case "knowledge":
+				stats.array = character.Knowledge;
+				stats.element = document.querySelector("character-card::shadow #knowledge-score").innerHTML;
+				stats.index = character.KnowledgeIndex;
+				break;
+			case "sanity":
+				stats.array = character.Sanity;
+				stats.element = document.querySelector("character-card::shadow #sanity-score").innerHTML;
+				stats.index = character.SanityIndex;
+				break;
+		}
+	},
+
+	increaseScore: function(attribute) {
+		stats = getStats(attribute);
+
+		if(--stats.index) {
+			stats.element = stats.array[stats.index];
+		}
+		else {
+			alert("You've died.");
+		}
+	},
+
+	decreaseScore: function(attribute) {
+		stats = getStats(attribute);
+
+		if(stats.index < 8) {
+			stats.element = stats.array[++stats.index];
+		}
+	},
 
 	setHeader: function(character) {
 		switch(character) {
@@ -49,6 +99,7 @@ Polymer('character-card', {
 		]
 
 		selection = this.response.Characters[characters.indexOf(character)];
+
 		document.querySelector("character-card::shadow #character-name").innerHTML = selection.Name;
 		document.querySelector("character-card::shadow #age").innerHTML = selection.Age;
 		document.querySelector("character-card::shadow #height").innerHTML = selection.Height;
@@ -59,6 +110,15 @@ Polymer('character-card', {
 		document.querySelector("character-card::shadow #speed-score").innerHTML = selection.Speed[selection.BaseSpeedIndex];
 		document.querySelector("character-card::shadow #knowledge-score").innerHTML = selection.Knowledge[selection.BaseKnowledgeIndex];
 		document.querySelector("character-card::shadow #sanity-score").innerHTML = selection.Sanity[selection.BaseSanityIndex];
+
+		character.Might = selection.Might;
+		character.Speed = selection.Speed;
+		character.Knowledge = selection.Knowledge;
+		character.Sanity = selection.Sanity;
+		character.MightIndex = selection.BaseMightIndex
+		character.SpeedIndex = selection.BaseSpeedIndex
+		character.KnowledgeIndex = selection.BaseKnowledgeIndex
+		character.SanityIndex = selection.BaseSanityIndex
 	},
 
 	getCharacter: function(character) {

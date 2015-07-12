@@ -6,7 +6,6 @@
 // 		this.getCharacter("professor-longfellow");
 // 	}
 // });
-
 test = function() {
 	setTimeout(function(){document.getElementById("character-picker").style.display = "none";}, 500);
 	setTimeout(function(){document.getElementsByTagName("character-card")[0].style.visibility = "visible";}, 1000);

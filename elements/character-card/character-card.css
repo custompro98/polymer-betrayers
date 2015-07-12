@@ -5,6 +5,24 @@ core-header-panel {
 	height: 100vh;
 }
 
+.up {
+	/*display: block;*/
+	/*margin-bottom: 10px;*/
+	/*height: 48px;*/
+	height: 20px;
+	width: 128px;
+	/*background-color: red;*/
+}
+
+.down {
+	/*display: block;*/
+	/*margin-top: 10px;*/
+	/*height: 48px;*/
+	height: 20px;
+	width: 128px;
+	/*background-color: blue;*/
+}
+
 .core-header {
 	height: 60px;
 	line-height: 60px;
@@ -16,7 +34,6 @@ core-header-panel {
 }
 
 .content {
-	height: 340px;
 	padding: 5px;
 	background: #FFFFFF;
 	color: rgba(0, 0, 0, 0.7);
@@ -31,8 +48,18 @@ core-header-panel {
 	background-color: green;
 }
 
+#physical, #mental {
+	width: 47%;
+	float: left;
+}
+
 .trait {
 	display: block;
+}
+
+.attribute {
+	margin-bottom: 5em;
+	text-align: center;
 }
 
 #vitals, #t_hobbies {
@@ -43,13 +70,29 @@ core-header-panel {
 	line-height: 32px;
 }
 
+span {
+	font-size: .9em;
+}
+
 .category {
+	font-size: 1em;
 	font-weight: bold;
+	/*background-color: green;*/
 }
 
 @media screen and (max-width: 480px) {
 	.content {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
 		height: 100vh;
-		padding-top: -60px;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.content {
+		min-height: 340px;
 	}
 }
