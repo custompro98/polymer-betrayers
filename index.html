@@ -15,17 +15,16 @@
 		<link rel="import" href="elements/character-card/character-card.html">
 
 		<script src="bower_components/screenfull/dist/screenfull.js"></script>
-		<script src="index.js"></script>
 	</head>
 	<body unresolved>
 		<div id="character-picker">
 			<h4>Choose a character</h4>
-			<paper-radio-group onchange="test()">
+			<paper-radio-group id="picker">
 				<!-- <div id="fronts">			 -->
 					<paper-radio-button name="ox-bellows" label="Ox Bellows"></paper-radio-button>
 					<paper-radio-button name="father-rhinehardt" label="Father Rhinehardt"></paper-radio-button>
 					<paper-radio-button name="vivian-lopez" label="Vivian Lopez"></paper-radio-button>
-					<paper-radio-button name="peter_akimoto" label="Peter Akimoto"></paper-radio-button>
+					<paper-radio-button name="peter-akimoto" label="Peter Akimoto"></paper-radio-button>
 					<paper-radio-button name="missy-dobourde" label="Missy Dobourde"></paper-radio-button>
 					<paper-radio-button name="jenny-leclerc" label="Jenny LeClerc"></paper-radio-button>
 				<!-- </div> -->
@@ -40,7 +39,8 @@
 			</paper-radio-group>
 		</div>
 		<div id="character-card">
-			<character-card></character-card>
+			<character-card id="card"></character-card>
 		</div>
+		<script src="index.js"></script>
 	</body>
 </html>

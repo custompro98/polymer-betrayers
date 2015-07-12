@@ -4,50 +4,70 @@ fullscreen = function() {
 
 Polymer('character-card', {
 	response: "",
-	character: "",
+	character: {
+		"Might":"",
+		"Speed":"",
+		"Knowledge":"",
+		"Sanity":"",
+		"MightIndex":"",
+		"SpeedIndex":"",
+		"KnowledgeIndex":"",
+		"SanityIndex":""
+	},
 
-	getStats: function(attribute) {
-		stats = "";
+	getStats: function() {
+		stats = {
+			"array":"",
+			"index":"",
+			"element":""
+		}
+
 		switch(attribute) {
 			case "might":
-				stats.array = character.Might;
-				stats.index = character.MightIndex;
+				stats.array = this.character.Might;
+				stats.index = this.character.MightIndex;
 				stats.element = document.querySelector("character-card::shadow #might-score").innerHTML;
 				break;
 			case "speed":
-				stats.array = character.Speed;
+				stats.array = this.character.Speed;
+				stats.index = this.character.SpeedIndex;
 				stats.element = document.querySelector("character-card::shadow #speed-score").innerHTML;
-				stats.index = character.SpeedIndex;
 				break;
 			case "knowledge":
-				stats.array = character.Knowledge;
+				stats.array = this.character.Knowledge;
 				stats.element = document.querySelector("character-card::shadow #knowledge-score").innerHTML;
-				stats.index = character.KnowledgeIndex;
+				stats.index = this.character.KnowledgeIndex;
 				break;
 			case "sanity":
-				stats.array = character.Sanity;
+				stats.array = this.character.Sanity;
+				stats.index = this.character.SanityIndex;
 				stats.element = document.querySelector("character-card::shadow #sanity-score").innerHTML;
-				stats.index = character.SanityIndex;
 				break;
 		}
+
+		// alert(this.stats.index);
+		return stats;
 	},
 
 	increaseScore: function(attribute) {
-		stats = getStats(attribute);
+		console.log("increase");
+		stats = this.getStats(attribute);
+		console.log(stats.index);
+		if(stats.index < 8) {
+			stats.element = stats.array[++stats.index];
+			console.log(stats.array[stats.index]);
+		}
+	},
+
+	decreaseScore: function(attribute) {
+		console.log("decrease");
+		stats = this.getStats(attribute);
 
 		if(--stats.index) {
 			stats.element = stats.array[stats.index];
 		}
 		else {
 			alert("You've died.");
-		}
-	},
-
-	decreaseScore: function(attribute) {
-		stats = getStats(attribute);
-
-		if(stats.index < 8) {
-			stats.element = stats.array[++stats.index];
 		}
 	},
 
@@ -69,7 +89,7 @@ Polymer('character-card', {
 			case "brandon-jaspers":
 				color = "#8BC34A";
 				break;
-			case "missy-ddobourde":
+			case "missy-dobourde":
 			case "zoe-ingstrom":
 				color = "#FFC107";
 				break;
@@ -77,6 +97,8 @@ Polymer('character-card', {
 			case "heather-granville":
 				color = "#9C27B0";
 				break;
+			default:
+				color = "#000000";
 		}
 
 		document.querySelector("character-card::shadow #character-name").style.backgroundColor = color;
@@ -88,7 +110,7 @@ Polymer('character-card', {
 				"father-rhinehardt",
 				"vivian-lopez",
 				"peter-akimoto",
-				"missy-ddobourde",
+				"missy-dobourde",
 				"jenny-leclerc",
 				"darrin-flash-williams",
 				"professor-longfellow",
@@ -111,14 +133,14 @@ Polymer('character-card', {
 		document.querySelector("character-card::shadow #knowledge-score").innerHTML = selection.Knowledge[selection.BaseKnowledgeIndex];
 		document.querySelector("character-card::shadow #sanity-score").innerHTML = selection.Sanity[selection.BaseSanityIndex];
 
-		character.Might = selection.Might;
-		character.Speed = selection.Speed;
-		character.Knowledge = selection.Knowledge;
-		character.Sanity = selection.Sanity;
-		character.MightIndex = selection.BaseMightIndex
-		character.SpeedIndex = selection.BaseSpeedIndex
-		character.KnowledgeIndex = selection.BaseKnowledgeIndex
-		character.SanityIndex = selection.BaseSanityIndex
+		this.character.Might = selection.Might;
+		this.character.Speed = selection.Speed;
+		this.character.Knowledge = selection.Knowledge;
+		this.character.Sanity = selection.Sanity;
+		this.character.MightIndex = selection.BaseMightIndex
+		this.character.SpeedIndex = selection.BaseSpeedIndex
+		this.character.KnowledgeIndex = selection.BaseKnowledgeIndex
+		this.character.SanityIndex = selection.BaseSanityIndex
 	},
 
 	getCharacter: function(character) {
@@ -144,6 +166,18 @@ Polymer('character-card', {
 	},
 
 	attached: function() {
+		self = this;
+
+		document.querySelector("character-card::shadow .up").addEventListener("click", function(event) {
+			attribute = event.target.attributes['name'].value;
+			self.increaseScore(attribute);			
+		});
+
+		document.querySelector("character-card::shadow .down").addEventListener("click", function(event) {
+			attribute = event.target.attributes['name'].value;
+			self.decreaseScore(attribute);			
+		});
+
 		this.getCharacter("darrin-flash-williams");
 	},
 });
