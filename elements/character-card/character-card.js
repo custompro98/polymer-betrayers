@@ -101,7 +101,7 @@ Polymer('character-card', {
 	},
 
 	clickHandler: function(event) {
-		event.preventDefault();
+		event.stopPropogation();
 		attribute = event.target.attributes['name'].value;
 		direction = event.target.attributes['class'].value;
 		self.updateStat(attribute, direction);
