@@ -104,6 +104,7 @@ Polymer('character-card', {
 		attribute = event.target.attributes['name'].value;
 		direction = event.target.attributes['class'].value;
 		self.updateStat(attribute, direction);
+		event.stopImmediatePropagation();
 	},
 
 	setHeader: function(character) {
