@@ -15,9 +15,7 @@ Polymer('character-card', {
 		"SanityIndex":""
 	},
 
-	updateStat: function(event) {
-		attribute = event.target.attributes['name'].value;
-		direction = event.target.attributes['class'].value;
+	updateStat: function(attribute, direction) {
 		switch(attribute) {
 			case "might":
 				switch(direction) {
@@ -105,7 +103,7 @@ Polymer('character-card', {
 	clickHandler: function(event) {
 		attribute = event.target.attributes['name'].value;
 		direction = event.target.attributes['class'].value;
-		// self.updateStat(attribute, direction);
+		this.updateStat(attribute, direction);
 	},
 
 	setHeader: function(character) {
@@ -212,7 +210,7 @@ Polymer('character-card', {
 		ups = document.querySelectorAll("character-card::shadow .up, .down");
 
 		for (var i = ups.length - 1; i >= 0; i--) {
-			ups[i].addEventListener("click", this.updateStat);
+			ups[i].addEventListener("click", this.clickHandler);
 		};
 
 		// downs = document.querySelectorAll("character-card::shadow .down");
