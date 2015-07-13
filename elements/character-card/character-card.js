@@ -101,7 +101,6 @@ Polymer('character-card', {
 	},
 
 	clickHandler: function(event) {
-		event.stopPropogation();
 		attribute = event.target.attributes['name'].value;
 		direction = event.target.attributes['class'].value;
 		self.updateStat(attribute, direction);
@@ -205,7 +204,7 @@ Polymer('character-card', {
 		request.send();
 	},
 
-	attached: function() {
+	domReady: function() {
 		self = this;
 
 		ups = document.querySelectorAll("character-card::shadow .up");
