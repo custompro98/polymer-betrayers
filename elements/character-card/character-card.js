@@ -210,13 +210,13 @@ Polymer('character-card', {
 		ups = document.querySelectorAll("character-card::shadow .up");
 
 		for (var i = ups.length - 1; i >= 0; i--) {
-			ups[i].addEventListener("click", clickHandler);
+			ups[i].addEventListener("click", clickHandler(event));
 		};
 
 		downs = document.querySelectorAll("character-card::shadow .down");
 
 		for (var j = downs.length - 1; j >= 0; j--) {
-			downs[j].addEventListener("click", clickHandler);
+			downs[j].addEventListener("click", clickHandler(event));
 		};
 
 		//this.getCharacter("darrin-flash-williams");
