@@ -13,7 +13,7 @@ h4 {
 }
 
 #character-picker {
-	display: none;
+	/*display: none;*/
 }
 
 #fronts {
@@ -31,7 +31,7 @@ paper-radio-button {
 }
 
 #character-card {
-	/*visibility: hidden;*/
+	visibility: hidden;
 }
 
 @media screen and (min-width: 480px) {
