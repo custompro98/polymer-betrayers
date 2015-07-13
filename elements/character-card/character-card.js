@@ -205,7 +205,7 @@ Polymer('character-card', {
 		request.send();
 	},
 
-	ready: function() {
+	attached: function() {
 		self = this;
 
 		ups = document.querySelectorAll("character-card::shadow .up");
