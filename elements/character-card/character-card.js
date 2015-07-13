@@ -207,18 +207,10 @@ Polymer('character-card', {
 	domReady: function() {
 		self = this;
 
-		// ups = document.querySelectorAll("character-card::shadow .up, .down");
+		arrows = document.querySelectorAll("character-card::shadow .up, .down");
 
-		// for (var i = ups.length - 1; i >= 0; i--) {
-		// 	ups[i].addEventListener("click", this.clickHandler);
-		// };
-
-		// downs = document.querySelectorAll("character-card::shadow .down");
-
-		// for (var j = downs.length - 1; j >= 0; j--) {
-		// 	downs[j].addEventListener("click", this.clickHandler);
-		// };
-
-		//this.getCharacter("darrin-flash-williams");
+		for (var i = arrows.length - 1; i >= 0; i--) {
+			arrows[i].addEventListener("click", this.clickHandler);
+		};
 	},
 });
