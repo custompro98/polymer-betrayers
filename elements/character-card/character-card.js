@@ -100,6 +100,12 @@ Polymer('character-card', {
 		}		
 	},
 
+	clickHandler(event) {
+		attribute = event.target.attributes['name'].value;
+		direction = event.target.attributes['class'].value;
+		self.updateStat(attribute, direction);
+	}
+
 	setHeader: function(character) {
 		switch(character) {
 			case "ox-bellows":
@@ -204,23 +210,15 @@ Polymer('character-card', {
 		ups = document.querySelectorAll("character-card::shadow .up");
 
 		for (var i = ups.length - 1; i >= 0; i--) {
-			ups[i].addEventListener("click", function(event) {
-				attribute = event.target.attributes['name'].value;
-				direction = event.target.attributes['class'].value;
-				self.updateStat(attribute, "up");
-			});
+			ups[i].addEventListener("click", clickHandler);
 		};
 
 		downs = document.querySelectorAll("character-card::shadow .down");
 
 		for (var j = downs.length - 1; j >= 0; j--) {
-			downs[j].addEventListener("click", function(event) {
-				attribute = event.target.attributes['name'].value;
-				direction = event.target.attributes['class'].value;
-				self.updateStat(attribute, "down");
-			});
+			downs[j].addEventListener("click", clickHandler);
 		};
 
-		this.getCharacter("darrin-flash-williams");
+		//this.getCharacter("darrin-flash-williams");
 	},
 });
