@@ -103,7 +103,7 @@ Polymer('character-card', {
 	clickHandler: function(event) {
 		attribute = event.target.attributes['name'].value;
 		direction = event.target.attributes['class'].value;
-		this.updateStat(attribute, direction);
+		updateStat(attribute, direction);
 	},
 
 	setHeader: function(character) {
