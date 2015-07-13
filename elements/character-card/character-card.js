@@ -30,12 +30,12 @@ Polymer('character-card', {
 						if(this.character.MightIndex > 0) {
 							document.querySelector("character-card::shadow #might-score").innerHTML = this.character.Might[--this.character.MightIndex];
 						}
-						if(!this.character.MightIndex) {
-							alert("You've died.");
-						}
 						break;
 				}
 				document.querySelector("character-card::shadow #might-index").innerHTML = this.character.MightIndex;
+				if(!this.character.MightIndex) {
+					alert("You've died.");
+				}
 				break;
 			case "speed":
 				switch(direction) {
@@ -50,12 +50,12 @@ Polymer('character-card', {
 						if(this.character.SpeedIndex > 0) {
 							document.querySelector("character-card::shadow #speed-score").innerHTML = this.character.Speed[--this.character.SpeedIndex];
 						}
-						if(!this.character.SpeedIndex) {
-							alert("You've died.");
-						}
 						break;
 				}
 				document.querySelector("character-card::shadow #speed-index").innerHTML = this.character.SpeedIndex;
+				if(!this.character.SpeedIndex) {
+					alert("You've died.");
+				}
 				break;
 			case "knowledge":
 				switch(direction) {
@@ -70,12 +70,12 @@ Polymer('character-card', {
 						if(this.character.KnowledgeIndex > 0) {
 							document.querySelector("character-card::shadow #knowledge-score").innerHTML = this.character.Knowledge[--this.character.KnowledgeIndex];
 						}
-						if(!this.character.KnowledgeIndex) {
-							alert("You've died.");
-						}
 						break;
 				}
 				document.querySelector("character-card::shadow #knowledge-index").innerHTML = this.character.KnowledgeIndex;
+				if(!this.character.KnowledgeIndex) {
+					alert("You've died.");
+				}
 				break;
 			case "sanity":
 				switch(direction) {
@@ -90,12 +90,12 @@ Polymer('character-card', {
 						if(this.character.SanityIndex > 0) {
 							document.querySelector("character-card::shadow #sanity-score").innerHTML = this.character.Sanity[--this.character.SanityIndex];
 						}
-						if(!this.character.SanityIndex) {
-							alert("You've died.");
-						}
 						break;
 				}
 				document.querySelector("character-card::shadow #sanity-index").innerHTML = this.character.SanityIndex;
+				if(!this.character.SanityIndex) {
+					alert("You've died.");
+				}
 				break;
 		}		
 	},
