@@ -213,8 +213,8 @@ Polymer('character-card', {
 
 		downs = document.querySelectorAll("character-card::shadow .down");
 
-		for (var i = downs.length - 1; i >= 0; i--) {
-			downs[i].addEventListener("click", function(event) {
+		for (var j = downs.length - 1; j >= 0; j--) {
+			downs[j].addEventListener("click", function(event) {
 				attribute = event.target.attributes['name'].value;
 				direction = event.target.attributes['class'].value;
 				self.updateStat(attribute, "down");
