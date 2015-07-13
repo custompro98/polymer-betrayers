@@ -210,7 +210,7 @@ Polymer('character-card', {
 		ups = document.querySelectorAll("character-card::shadow .up");
 
 		for (var i = ups.length - 1; i >= 0; i--) {
-			ups[i].addEventListener("click", this.clickHandler;
+			ups[i].addEventListener("click", this.clickHandler);
 		};
 
 		downs = document.querySelectorAll("character-card::shadow .down");
