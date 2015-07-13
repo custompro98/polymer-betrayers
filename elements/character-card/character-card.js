@@ -207,11 +207,11 @@ Polymer('character-card', {
 	domReady: function() {
 		self = this;
 
-		ups = document.querySelectorAll("character-card::shadow .up, .down");
+		// ups = document.querySelectorAll("character-card::shadow .up, .down");
 
-		for (var i = ups.length - 1; i >= 0; i--) {
-			ups[i].addEventListener("click", this.clickHandler);
-		};
+		// for (var i = ups.length - 1; i >= 0; i--) {
+		// 	ups[i].addEventListener("click", this.clickHandler);
+		// };
 
 		// downs = document.querySelectorAll("character-card::shadow .down");
 
