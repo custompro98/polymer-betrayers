@@ -1,6 +1,6 @@
-fullscreen = function() {
-	screenfull.toggle();
-}
+// fullscreen = function() {
+// 	screenfull.toggle();
+// }
 
 Polymer('character-card', {
 	response: "",
@@ -13,6 +13,10 @@ Polymer('character-card', {
 		"SpeedIndex":"",
 		"KnowledgeIndex":"",
 		"SanityIndex":""
+	},
+
+	fullscreen: function() {
+		screenfull.toggle();
 	},
 
 	updateStat: function(attribute, direction) {
