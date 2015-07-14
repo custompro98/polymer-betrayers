@@ -22,7 +22,7 @@ Polymer('character-card', {
 					case "up":
 						console.log("up");
 						if(this.character.MightIndex < 8) {
-							tihs.$.might-score.innerHTML = this.character.Might[++this.character.MightIndex];
+							tihs.$.mightScore.innerHTML = this.character.Might[++this.character.MightIndex];
 						}
 						break;
 					case "down":
