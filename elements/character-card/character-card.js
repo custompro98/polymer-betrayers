@@ -155,7 +155,7 @@ Polymer('character-card', {
 		// 		"heather-granville"
 		// ]
 
-		selection = this.character;
+		selection = this.attributes["character"];
 
 		this.$.characterName.innerHTML = selection.Name;
 		this.$.age.innerHTML = selection.Age;
