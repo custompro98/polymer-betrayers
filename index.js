@@ -13,7 +13,7 @@ getCharacters = function() {
 	self = this;
 
 	request = new XMLHttpRequest();
-	request.open("GET", "/polymer-character-card/elements/character-card/characters.json", true);
+	request.open("GET", "/polymer-character-card/elements/character-card/characters.json", false);
 
 	request.onreadystatechange = function() {
 		if(request.readyState === request.DONE) {
