@@ -1,7 +1,7 @@
 response = "";
 
 populateRadioButtons = function() {
-	characterPicker = document.findElementById("picker");
+	characterPicker = document.getElementById("picker");
 	this.response.Characters.forEach(function(element, index, array) {
 		option = document.createElement("paper-radio-button");
 		option.setAttribute("label", element.Name);
