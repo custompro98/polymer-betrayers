@@ -10,7 +10,7 @@ Probaly not even open source.
 
 ###How am I supposed to play my custom characters if I can't edit the source?
 Short answer: you can't.
-Long answer: you ditch it and use <character-card> built with Polymer to extend your character list.
+Long answer: you ditch it and use &lt;character-card&gt; built with Polymer to extend your character list.
 
 ###But how do I add characters?
 Easy. Fork it and add your custom character to the Characters array in characters.json. The application takes care of the rest.
