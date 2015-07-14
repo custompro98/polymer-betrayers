@@ -3,14 +3,14 @@
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../../bower_components/core-icon/core-icon.html">
 
-<polymer-element name="character-card">
+<polymer-element name="character-card" attributes="character">
 	<template>
 		<link href="character-card.css" rel="stylesheet" type="text/css">
 
 		<core-header-panel>
-    		<div class="core-header" id="character-name" onclick="fullscreen()">Name Here</div>
-    		<div class="content" id="character-stats">
-                <div id="profile-pic">
+    		<div class="core-header" id="characterName" on-click="{{fullscreen}}">Name Here</div>
+    		<div class="content" id="characterStats">
+                <div id="profilePic">
                 </div>
                 <div id="vitals">
                     <div class="trait">
@@ -26,31 +26,31 @@
                         <span class="category">Birthday: </span><span id="birthday"></span>
                     </div>
                 </div>
-                <div class="trait" id="t_hobbies">
+                <div class="trait" id="tHobbies">
                     <span class="category">Hobbies: </span><span id="hobbies"></span>
                 </div>
     			<div id="physical">
     				<div class="attribute">
-                        <core-icon icon="expand-less" class="up" name="might"></core-icon-button><br/>
-                        <span class="category">Might: </span><span id="might-score"></span><br/>
-                        <core-icon icon="expand-more" class="down" name="might"></core-icon-button>
+                        <core-icon icon="expand-less" class="up" name="might" on-click="{{clickHandler}}"></core-icon-button><br/>
+                        (<span id="mightIndex"></span>)<span class="category">Might: </span><span id="mightScore"></span><br/>
+                        <core-icon icon="expand-more" class="down" name="might" on-click="{{clickHandler}}"></core-icon-button>
     				</div>
     				<div class="attribute">
-                        <core-icon icon="expand-less" class="up" name="speed"></core-icon-button><br/>
-	    				<span class="category">Speed: </span><span id="speed-score"></span><br/>
-                        <core-icon icon="expand-more" class="down" name="speed"></core-icon-button>
+                        <core-icon icon="expand-less" class="up" name="speed" on-click="{{clickHandler}}"></core-icon-button><br/>
+	    				(<span id="speedIndex"></span>)<span class="category">Speed: </span><span id="speedScore"></span><br/>
+                        <core-icon icon="expand-more" class="down" name="speed" on-click="{{clickHandler}}"></core-icon-button>
     				</div>
     			</div>
     			<div id="mental">
     				<div class="attribute">
-                        <core-icon icon="expand-less" class="up" name="knowledge"></core-icon-button><br/>
-	    				<span class="category">Knowledge: </span><span id="knowledge-score"></span><br/>
-                        <core-icon icon="expand-more" class="down" name="knowledge"></core-icon-button>
+                        <core-icon icon="expand-less" class="up" name="knowledge" on-click="{{clickHandler}}"></core-icon-button><br/>
+	    				(<span id="knowledgeIndex"></span>)<span class="category">Knowledge: </span><span id="knowledgeScore"></span><br/>
+                        <core-icon icon="expand-more" class="down" name="knowledge" on-click="{{clickHandler}}"></core-icon-button>
     				</div>
     				<div class="attribute">
-                        <core-icon icon="expand-less" class="up" name="sanity"></core-icon-button><br/>
-	    				<span class="category">Sanity: </span><span id="sanity-score"></span><br/>
-                        <core-icon icon="expand-more" class="down" name="sanity"></core-icon-button>
+                        <core-icon icon="expand-less" class="up" name="sanity" on-click="{{clickHandler}}"></core-icon-button><br/>
+	    				(<span id="sanityIndex"></span>)<span class="category">Sanity: </span><span id="sanityScore"></span><br/>
+                        <core-icon icon="expand-more" class="down" name="sanity" on-click="{{clickHandler}}"></core-icon-button>
     				</div>
     			</div>
     		</div>

@@ -6,21 +6,13 @@ core-header-panel {
 }
 
 .up {
-	/*display: block;*/
-	/*margin-bottom: 10px;*/
-	/*height: 48px;*/
 	height: 20px;
 	width: 128px;
-	/*background-color: red;*/
 }
 
 .down {
-	/*display: block;*/
-	/*margin-top: 10px;*/
-	/*height: 48px;*/
 	height: 20px;
 	width: 128px;
-	/*background-color: blue;*/
 }
 
 .core-header {
@@ -39,7 +31,7 @@ core-header-panel {
 	color: rgba(0, 0, 0, 0.7);
 }
 
-#profile-pic {
+#profilePic {
 	height: 128px;
 	width: 128px;
 	float: left;
@@ -62,7 +54,7 @@ core-header-panel {
 	text-align: center;
 }
 
-#vitals, #t_hobbies {
+#vitals, #tHobbies {
 	margin-bottom: 5px;
 }
 
@@ -77,7 +69,7 @@ span {
 .category {
 	font-size: 1em;
 	font-weight: bold;
-	/*background-color: green;*/
+	margin-left: 3px;
 }
 
 @media screen and (max-width: 480px) {
