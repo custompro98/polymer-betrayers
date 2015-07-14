@@ -12,8 +12,6 @@ populateRadioButtons = function() {
 getCharacters = function() {
 	self = this;
 
-	this.setHeader(character);
-
 	request = new XMLHttpRequest();
 	request.open("GET", "/polymer-character-card/elements/character-card/characters.json", true);
 
