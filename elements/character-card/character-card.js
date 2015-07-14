@@ -139,23 +139,23 @@ Polymer('character-card', {
 		this.$.characterName.style.backgroundColor = color;
 	},
 
-	setCardValues: function(character) {
-		characters = [
-				"ox-bellows",
-				"father-rhinehardt",
-				"vivian-lopez",
-				"peter-akimoto",
-				"missy-dobourde",
-				"jenny-leclerc",
-				"darrin-flash-williams",
-				"professor-longfellow",
-				"madame-zostra",
-				"brandon-jaspers",
-				"zoe-ingstrom",
-				"heather-granville"
-		]
+	setCardValues: function() {
+		// characters = [
+		// 		"ox-bellows",
+		// 		"father-rhinehardt",
+		// 		"vivian-lopez",
+		// 		"peter-akimoto",
+		// 		"missy-dobourde",
+		// 		"jenny-leclerc",
+		// 		"darrin-flash-williams",
+		// 		"professor-longfellow",
+		// 		"madame-zostra",
+		// 		"brandon-jaspers",
+		// 		"zoe-ingstrom",
+		// 		"heather-granville"
+		// ]
 
-		selection = this.response.Characters[characters.indexOf(character)];
+		selection = {{character}};
 
 		this.$.characterName.innerHTML = selection.Name;
 		this.$.age.innerHTML = selection.Age;
@@ -182,35 +182,31 @@ Polymer('character-card', {
 		this.character.SanityIndex = selection.BaseSanityIndex
 	},
 
-	getCharacter: function(character) {
+	// getCharacter: function(character) {
+	// 	self = this;
+
+	// 	this.setHeader(character);
+
+	// 	request = new XMLHttpRequest();
+	// 	request.open("GET", "/polymer-character-card/elements/character-card/characters.json", true);
+
+	// 	response = "";
+	// 	request.onreadystatechange = function() {
+	// 		if(request.readyState === request.DONE) {
+	// 			status = request.status;
+
+	// 			if((status >= 200 && status < 300) || status === 304 || status === 0) {
+	// 				self.response = JSON.parse(request.responseText);
+	// 				self.setCardValues(character);
+	// 			}
+	// 		}
+	// 	};
+	// 	request.send();
+	// },
+
+	attached: function() {
 		self = this;
 
-		this.setHeader(character);
-
-		request = new XMLHttpRequest();
-		request.open("GET", "/polymer-character-card/elements/character-card/characters.json", true);
-
-		response = "";
-		request.onreadystatechange = function() {
-			if(request.readyState === request.DONE) {
-				status = request.status;
-
-				if((status >= 200 && status < 300) || status === 304 || status === 0) {
-					self.response = JSON.parse(request.responseText);
-					self.setCardValues(character);
-				}
-			}
-		};
-		request.send();
-	},
-
-	domReady: function() {
-		self = this;
-
-		// arrows = document.querySelectorAll("character-card::shadow .up, .down");
-
-		// for (var i = arrows.length - 1; i >= 0; i--) {
-		// 	arrows[i].addEventListener("click", this.clickHandler);
-		// };
+		setCardValues();
 	},
 });
