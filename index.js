@@ -34,7 +34,7 @@ document.querySelector("#picker").addEventListener("change", function(event) {
 	// characterCard = document.querySelector("#card");
 	// characterCard.getCharacter(event.target.attributes['name'].value);
 	// setTimeout(function(){document.getElementsByTagName("character-card")[0].style.visibility = "visible";}, 1000);
-	this.response.Characters.forEach(function(element, index, array) {
+	window.response.Characters.forEach(function(element, index, array) {
 		if(element.Name == event.target.attributes['label'].value) {
 			characterCard = document.createElement("character-card");
 			characterCard.setAttribute("character", character);
