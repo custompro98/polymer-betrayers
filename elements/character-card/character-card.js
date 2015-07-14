@@ -207,10 +207,10 @@ Polymer('character-card', {
 	domReady: function() {
 		self = this;
 
-		arrows = document.querySelectorAll("character-card::shadow .up, .down");
+		// arrows = document.querySelectorAll("character-card::shadow .up, .down");
 
-		for (var i = arrows.length - 1; i >= 0; i--) {
-			arrows[i].addEventListener("click", this.clickHandler);
-		};
+		// for (var i = arrows.length - 1; i >= 0; i--) {
+		// 	arrows[i].addEventListener("click", this.clickHandler);
+		// };
 	},
 });
