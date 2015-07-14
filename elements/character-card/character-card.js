@@ -207,6 +207,6 @@ Polymer('character-card', {
 	attached: function() {
 		self = this;
 
-		setCardValues();
+		this.setCardValues();
 	},
 });
