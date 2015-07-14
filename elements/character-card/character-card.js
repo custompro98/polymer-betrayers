@@ -1,7 +1,3 @@
-// fullscreen = function() {
-// 	screenfull.toggle();
-// }
-
 Polymer('character-card', {
 	response: "",
 	character: {
