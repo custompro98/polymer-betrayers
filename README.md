@@ -19,7 +19,7 @@ Easy. Fork it and add your custom character to the Characters array in character
 Don't worry, leave that field blank. There's a default color scheme (plain black, how boring.)
 
 ###Can I at least see what it looks like before I decide?
-Sure can, live demo right here on GitHub - [custompro98.github.io/polymer-character-card](custompro98.github.io/polymer-character-card)
+Sure can, live demo right here on GitHub - [http://custompro98.github.io/polymer-character-card/](http://custompro98.github.io/polymer-character-card/)
 
 ###I hate your interface/I want new characters/I want to practice working in Polymer
 Fork it, download it, copy it, whatever. MIT license. I just ask you link back to my original source somehow. Put your own code under whatever license you feel is right.
