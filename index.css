@@ -12,10 +12,6 @@ h4 {
 	color: rgba(255, 255, 255, 1.0);
 }
 
-#character-picker {
-	/*display: none;*/
-}
-
 #fronts {
 	float: left;
 }
@@ -30,16 +26,12 @@ paper-radio-button {
 	color: rgba(255, 255, 255, 0.7);
 }
 
-#character-card {
-	visibility: hidden;
-}
-
 @media screen and (min-width: 480px) {
 	body {
 		padding: 10px;
 	}
 
-	#character-card {
+	#characterCard {
 		width: 475px;
 		margin: 0 auto;
 	}
@@ -50,7 +42,7 @@ paper-radio-button {
 		height: 100vh;
 	}
 
-	#character-card {
+	#characterCard {
 		padding: 0;
 		margin: 0;
 		height: 100%;

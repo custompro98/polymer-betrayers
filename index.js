@@ -30,15 +30,14 @@ getCharacters = function() {
 }
 
 document.querySelector("#picker").addEventListener("change", function(event) {
-	setTimeout(function(){document.getElementById("character-picker").style.display = "none";}, 500);
-	// characterCard = document.querySelector("#card");
-	// characterCard.getCharacter(event.target.attributes['name'].value);
-	// setTimeout(function(){document.getElementsByTagName("character-card")[0].style.visibility = "visible";}, 1000);
+	characterCardContainer = document.getElementById("characterCard");
+	document.getElementById("characterPicker").style.display = "none";
 	window.response.Characters.forEach(function(element, index, array) {
 		if(element.Name == event.target.attributes['label'].value) {
 			characterCard = document.createElement("character-card");
-			characterCard.setAttribute("character", window.response.Characters[index]);
-			document.body.appendChild(characterCard);
+			characterCard.setAttribute("id", "card");
+			characterCard.character = element;
+			characterCardContainer.appendChild(characterCard);
 		}
 	});
 });

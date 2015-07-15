@@ -106,56 +106,18 @@ Polymer('character-card', {
 		self.updateStat(attribute, direction);
 	},
 
-	setHeader: function(character) {
-		switch(character) {
-			case "ox-bellows":
-			case "darrin-flash-williams":
-				color = "#F44336";
-				break;
-			case "father-rhinehardt":
-			case "professor-longfellow":
-				color = "#9E9E9E";
-				break;
-			case "vivian-lopez":
-			case "madame-zostra":
-				color = "#3F51B5";
-				break;
-			case "peter-akimoto":
-			case "brandon-jaspers":
-				color = "#8BC34A";
-				break;
-			case "missy-dobourde":
-			case "zoe-ingstrom":
-				color = "#FFC107";
-				break;
-			case "jenny-leclerc":
-			case "heather-granville":
-				color = "#9C27B0";
-				break;
-			default:
-				color = "#000000";
+	setHeader: function(color) {
+		pattern = /^\#([a-f]|[0-9]){6}$$/i;
+		if(!pattern.test(color)) {
+			color = "#000000";
 		}
 
 		this.$.characterName.style.backgroundColor = color;
 	},
 
 	setCardValues: function() {
-		// characters = [
-		// 		"ox-bellows",
-		// 		"father-rhinehardt",
-		// 		"vivian-lopez",
-		// 		"peter-akimoto",
-		// 		"missy-dobourde",
-		// 		"jenny-leclerc",
-		// 		"darrin-flash-williams",
-		// 		"professor-longfellow",
-		// 		"madame-zostra",
-		// 		"brandon-jaspers",
-		// 		"zoe-ingstrom",
-		// 		"heather-granville"
-		// ]
-
-		selection = this.attributes["character"];
+		selection = this.character;
+		this.setHeader(selection.Color);
 
 		this.$.characterName.innerHTML = selection.Name;
 		this.$.age.innerHTML = selection.Age;
@@ -181,28 +143,6 @@ Polymer('character-card', {
 		this.character.KnowledgeIndex = selection.BaseKnowledgeIndex
 		this.character.SanityIndex = selection.BaseSanityIndex
 	},
-
-	// getCharacter: function(character) {
-	// 	self = this;
-
-	// 	this.setHeader(character);
-
-	// 	request = new XMLHttpRequest();
-	// 	request.open("GET", "/polymer-character-card/elements/character-card/characters.json", true);
-
-	// 	response = "";
-	// 	request.onreadystatechange = function() {
-	// 		if(request.readyState === request.DONE) {
-	// 			status = request.status;
-
-	// 			if((status >= 200 && status < 300) || status === 304 || status === 0) {
-	// 				self.response = JSON.parse(request.responseText);
-	// 				self.setCardValues(character);
-	// 			}
-	// 		}
-	// 	};
-	// 	request.send();
-	// },
 
 	attached: function() {
 		self = this;
