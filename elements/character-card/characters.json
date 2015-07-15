@@ -105,7 +105,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 5,
 			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#9C27B0"
 		},
 		{
 			"Name" : "Darrin 'Flash' Williams",
