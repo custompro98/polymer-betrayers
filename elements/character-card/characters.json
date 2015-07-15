@@ -15,7 +15,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#F44336"
 		},
 		{
 			"Name" : "Father Rhinehardt",
@@ -32,7 +33,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 6,
 			"BaseKnowledgeIndex" : 4,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#9E9E9E"
 		},
 		{
 			"Name" : "Vivian Lopez",
@@ -49,7 +51,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 4,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#3F51B5"
 		},
 		{
 			"Name" : "Peter Akimoto",
@@ -66,7 +69,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" :4,
 			"BaseKnowledgeIndex" : 3,
-			"Image" : ""			
+			"Image" : "",
+			"Color" : "#8BC34A"
 		},
 		{
 			"Name" : "Missy Dubourde",
@@ -83,7 +87,8 @@
 			"BaseMightIndex" : 4,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 4,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#FFC107"
 		},
 		{
 			"Name" : "Jenny LeClerc",
@@ -117,7 +122,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#F44336"
 		},
 		{
 			"Name" : "Professor Longfellow",
@@ -134,7 +140,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 5,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#9E9E9E"
 		},
 		{
 			"Name" : "Madame Zostra",
@@ -151,7 +158,8 @@
 			"BaseMightIndex" : 4,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 4,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#3F51B5"
 		},
 		{
 			"Name" : "Brandon Jaspers",
@@ -168,7 +176,8 @@
 			"BaseMightIndex" : 4,
 			"BaseSanityIndex" : 4,
 			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#8BC34A"
 		},
 		{
 			"Name" : "Zoe Ingstrom",
@@ -185,7 +194,8 @@
 			"BaseMightIndex" : 4,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 3,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#FFC107"
 		},
 		{
 			"Name" : "Heather Granville",
@@ -202,7 +212,8 @@
 			"BaseMightIndex" : 3,
 			"BaseSanityIndex" : 3,
 			"BaseKnowledgeIndex" : 5,
-			"Image" : ""
+			"Image" : "",
+			"Color" : "#9C27B0"
 		}
 	]
 }
