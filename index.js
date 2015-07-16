@@ -28,8 +28,6 @@ getCharacters = function() {
 		}
 	};
 	request.send();
-	
-	// populateRadioButtons();
 }
 
 document.querySelector("#picker").addEventListener("change", function(event) {
