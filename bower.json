@@ -8,12 +8,12 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "screenfull": "~2.0.0",
     "polymer": "Polymer/polymer#^1.0.0",
     "paper-radio-group": "PolymerElements/paper-radio-group#~1.0.4",
     "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.5",
     "paper-header-panel": "PolymerElements/paper-header-panel#~1.0.2",
     "iron-icon": "PolymerElements/iron-icon#~1.0.2",
-    "iron-icons": "PolymerElements/iron-icons#~1.0.3",
-    "screenfull": "~2.0.0"
+    "iron-icons": "PolymerElements/iron-icons#~1.0.3"
   }
 }
