@@ -36,6 +36,7 @@ document.querySelector("#picker").addEventListener("change", function(event) {
 	document.body.removeChild(document.getElementById("characterPicker"));
 	window.response.Characters.forEach(function(element, index, array) {
 		if(element.Name == event.target.attributes["name"].value) {
+			document.title = element.Name + " Character Card";
 			characterCard = document.createElement("character-card");
 			characterCard.setAttribute("id", "card");
 			characterCard.character = element;
