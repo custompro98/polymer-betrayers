@@ -22,6 +22,6 @@
     "commit": "401764710ac11f9ed8a175195107752af2f72eb6"
   },
   "_source": "git://github.com/Polymer/webcomponentsjs.git",
-  "_target": "*",
-  "_originalSource": "Polymer/webcomponentsjs"
+  "_target": "^0.7.2",
+  "_originalSource": "webcomponentsjs"
 }

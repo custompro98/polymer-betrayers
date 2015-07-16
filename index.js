@@ -4,8 +4,10 @@ populateRadioButtons = function() {
 	characterPicker = document.getElementById("picker");
 	this.response.Characters.forEach(function(element, index, array) {
 		option = document.createElement("paper-radio-button");
-		option.setAttribute("label", element.Name);
-		characterPicker.appendChild(option);
+		option.innerHTML += element.Name;
+		option.setAttribute("name", element.Name);
+		Polymer.dom(characterPicker).appendChild(option);
+
 	});
 }
 
@@ -31,9 +33,9 @@ getCharacters = function() {
 
 document.querySelector("#picker").addEventListener("change", function(event) {
 	characterCardContainer = document.getElementById("characterCard");
-	document.getElementById("characterPicker").style.display = "none";
+	document.body.removeChild(document.getElementById("characterPicker"));
 	window.response.Characters.forEach(function(element, index, array) {
-		if(element.Name == event.target.attributes['label'].value) {
+		if(element.Name == event.target.attributes["name"].value) {
 			characterCard = document.createElement("character-card");
 			characterCard.setAttribute("id", "card");
 			characterCard.character = element;

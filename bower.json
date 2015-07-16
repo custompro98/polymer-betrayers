@@ -1,21 +1,19 @@
 {
-  "name": "betrayal_characters",
-  "version": "0.0.0",
+  "name": "polymer-character-card",
+  "main": "index.js",
+  "version": "0.2.0",
+  "homepage": "https://github.com/custompro98/polymer-character-card",
   "authors": [
     "Mitch <mitchjoa@gmail.com>"
   ],
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.5",
-    "core-elements": "Polymer/core-elements#~0.5.6",
-    "paper-elements": "Polymer/paper-elements#~0.5.6",
+    "polymer": "Polymer/polymer#^1.0.0",
+    "paper-radio-group": "PolymerElements/paper-radio-group#~1.0.4",
+    "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.5",
+    "paper-header-panel": "PolymerElements/paper-header-panel#~1.0.2",
+    "iron-icon": "PolymerElements/iron-icon#~1.0.2",
+    "iron-icons": "PolymerElements/iron-icons#~1.0.3",
     "screenfull": "~2.0.0"
   }
 }
