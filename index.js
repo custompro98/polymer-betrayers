@@ -15,7 +15,7 @@ getCharacters = function() {
 	self = this;
 
 	request = new XMLHttpRequest();
-	request.open("GET", "/polymer-betrayers/elements/character-card/characters.json", false);
+	request.open("GET", "/polymer-betrayers/elements/character-card/characters.json");
 
 	request.onreadystatechange = function() {
 		if(request.readyState === request.DONE) {
@@ -23,12 +23,11 @@ getCharacters = function() {
 
 			if((status >= 200 && status < 300) || status === 304 || status === 0) {
 				self.response = JSON.parse(request.responseText);
+				populateRadioButtons();
 			}
 		}
 	};
 	request.send();
-	
-	populateRadioButtons();
 }
 
 document.querySelector("#picker").addEventListener("change", function(event) {
