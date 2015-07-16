@@ -1,4 +1,10 @@
-Polymer('character-card', {
+Polymer({
+	is: "character-card",
+
+	properties: {
+		character: Object
+	},
+
 	response: "",
 	character: {
 		"Might":"",
@@ -100,9 +106,9 @@ Polymer('character-card', {
 		}		
 	},
 
-	clickHandler: function(event, detail, sender) {
+	clickHandler: function(event, detail) {
 		attribute = event.target.attributes['name'].value;
-		direction = event.target.attributes['class'].value;
+		direction = event.target.attributes['direction'].value;
 		self.updateStat(attribute, direction);
 	},
 
@@ -146,7 +152,6 @@ Polymer('character-card', {
 
 	attached: function() {
 		self = this;
-
 		this.setCardValues();
 	},
 });
