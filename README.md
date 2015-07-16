@@ -1,4 +1,4 @@
-# Polymer Character Card
+# Polymer Betrayers
 ###I love playing Betrayal at House on the Hill!
 Then you know how irritating it is to manage the bulit in character cards.
 
