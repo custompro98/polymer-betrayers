@@ -3,7 +3,10 @@ Polymer({
 
 	properties: {
 		character: Object,
-		stats: Object
+		stats: {
+			type: Object,
+			notify: true
+		}
 	},
 
 /*	stats: {
