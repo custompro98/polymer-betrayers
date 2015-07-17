@@ -147,7 +147,7 @@ Polymer({
 		this.stats.SanityIndex = selection.BaseSanityIndex
 	},
 
-	created: function() {
+	ready: function() {
 		self = this;
 
 		this.stats = {
