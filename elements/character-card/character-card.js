@@ -93,7 +93,8 @@ Polymer({
 				break;
 		}
 
-		this.stats = stats;	
+		this.stats = stats;
+		this.notifyPath("stats", this.stats);
 	},
 
 	clickHandler: function(event, detail) {
