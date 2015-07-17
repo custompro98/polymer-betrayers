@@ -149,7 +149,7 @@ Polymer({
 			"MightIndex":"",
 			"SpeedIndex":"",
 			"KnowledgeIndex":"",
-			"SanityIndex":""
+			"SanityIndex":"",
 			"MightScore":"",
 			"SpeedScore":"",
 			"KnowledgeScore":"",
