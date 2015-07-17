@@ -9,16 +9,16 @@ Polymer({
 		// }
 	},
 
-	stats: {
-		"Might":"",
-		"Speed":"",
-		"Knowledge":"",
-		"Sanity":"",
-		"MightIndex":"",
-		"SpeedIndex":"",
-		"KnowledgeIndex":"",
-		"SanityIndex":""
-	},
+	// stats: {
+	// 	"Might":"",
+	// 	"Speed":"",
+	// 	"Knowledge":"",
+	// 	"Sanity":"",
+	// 	"MightIndex":"",
+	// 	"SpeedIndex":"",
+	// 	"KnowledgeIndex":"",
+	// 	"SanityIndex":""
+	// },
 
 	fullscreen: function() {
 		screenfull.toggle();
@@ -30,19 +30,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.stats.MightIndex < 8) {
-							this.$.mightScore.innerHTML = this.stats.Might[++this.stats.MightIndex];
+						if(stats.MightIndex < 8) {
+							this.$.mightScore.innerHTML = stats.Might[++stats.MightIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.stats.MightIndex > 0) {
-							this.$.mightScore.innerHTML = this.stats.Might[--this.stats.MightIndex];
+						if(stats.MightIndex > 0) {
+							this.$.mightScore.innerHTML = stats.Might[--stats.MightIndex];
 						}
 						break;
 				}
-				this.$.mightIndex.innerHTML = this.stats.MightIndex;
-				if(!this.stats.MightIndex) {
+				this.$.mightIndex.innerHTML = stats.MightIndex;
+				if(!stats.MightIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -50,19 +50,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.stats.SpeedIndex < 8) {
-							this.$.speedScore.innerHTML = this.stats.Speed[++this.stats.SpeedIndex];
+						if(stats.SpeedIndex < 8) {
+							this.$.speedScore.innerHTML = stats.Speed[++stats.SpeedIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.stats.SpeedIndex > 0) {
-							this.$.speedScore.innerHTML = this.stats.Speed[--this.stats.SpeedIndex];
+						if(stats.SpeedIndex > 0) {
+							this.$.speedScore.innerHTML = stats.Speed[--stats.SpeedIndex];
 						}
 						break;
 				}
-				this.$.speedIndex.innerHTML = this.stats.SpeedIndex;
-				if(!this.stats.SpeedIndex) {
+				this.$.speedIndex.innerHTML = stats.SpeedIndex;
+				if(!stats.SpeedIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -70,19 +70,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.stats.KnowledgeIndex < 8) {
-							this.$.knowledgeScore.innerHTML = this.stats.Knowledge[++this.stats.KnowledgeIndex];
+						if(stats.KnowledgeIndex < 8) {
+							this.$.knowledgeScore.innerHTML = stats.Knowledge[++stats.KnowledgeIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.stats.KnowledgeIndex > 0) {
-							this.$.knowledgeScore.innerHTML = this.stats.Knowledge[--this.stats.KnowledgeIndex];
+						if(stats.KnowledgeIndex > 0) {
+							this.$.knowledgeScore.innerHTML = stats.Knowledge[--stats.KnowledgeIndex];
 						}
 						break;
 				}
-				this.$.knowledgeIndex.innerHTML = this.stats.KnowledgeIndex;
-				if(!this.stats.KnowledgeIndex) {
+				this.$.knowledgeIndex.innerHTML = stats.KnowledgeIndex;
+				if(!stats.KnowledgeIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -90,19 +90,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.stats.SanityIndex < 8) {
-							this.$.sanityScore.innerHTML = this.stats.Sanity[++this.stats.SanityIndex];
+						if(stats.SanityIndex < 8) {
+							this.$.sanityScore.innerHTML = stats.Sanity[++stats.SanityIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.stats.SanityIndex > 0) {
-							this.$.sanityScore.innerHTML = this.stats.Sanity[--this.stats.SanityIndex];
+						if(stats.SanityIndex > 0) {
+							this.$.sanityScore.innerHTML = stats.Sanity[--stats.SanityIndex];
 						}
 						break;
 				}
-				this.$.sanityIndex.innerHTML = this.stats.SanityIndex;
-				if(!this.stats.SanityIndex) {
+				this.$.sanityIndex.innerHTML = stats.SanityIndex;
+				if(!stats.SanityIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -137,29 +137,29 @@ Polymer({
 		// this.$.knowledgeIndex.innerHTML = selection.BaseKnowledgeIndex;
 		// this.$.sanityIndex.innerHTML = selection.BaseSanityIndex;		
 
-		this.stats.Might = selection.Might;
-		this.stats.Speed = selection.Speed;
-		this.stats.Knowledge = selection.Knowledge;
-		this.stats.Sanity = selection.Sanity;
-		this.stats.MightIndex = selection.BaseMightIndex
-		this.stats.SpeedIndex = selection.BaseSpeedIndex
-		this.stats.KnowledgeIndex = selection.BaseKnowledgeIndex
-		this.stats.SanityIndex = selection.BaseSanityIndex
+		stats.Might = selection.Might;
+		stats.Speed = selection.Speed;
+		stats.Knowledge = selection.Knowledge;
+		stats.Sanity = selection.Sanity;
+		stats.MightIndex = selection.BaseMightIndex
+		stats.SpeedIndex = selection.BaseSpeedIndex
+		stats.KnowledgeIndex = selection.BaseKnowledgeIndex
+		stats.SanityIndex = selection.BaseSanityIndex
 	},
 
 	attached: function() {
 		self = this;
 
-		// this.stats = {
-		// 	"Might":"",
-		// 	"Speed":"",
-		// 	"Knowledge":"",
-		// 	"Sanity":"",
-		// 	"MightIndex":"",
-		// 	"SpeedIndex":"",
-		// 	"KnowledgeIndex":"",
-		// 	"SanityIndex":""
-		// };
+		stats = {
+			"Might":"",
+			"Speed":"",
+			"Knowledge":"",
+			"Sanity":"",
+			"MightIndex":"",
+			"SpeedIndex":"",
+			"KnowledgeIndex":"",
+			"SanityIndex":""
+		};
 
 		this.setCardValues();
 	},
