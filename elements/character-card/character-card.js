@@ -28,17 +28,16 @@ Polymer({
 					case "up":
 						console.log("up");
 						if(stats.MightIndex < 8) {
-							this.$.mightScore.innerHTML = stats.Might[++stats.MightIndex];
+							stats.MightScore = stats.Might[++stats.MightIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
 						if(stats.MightIndex > 0) {
-							this.$.mightScore.innerHTML = stats.Might[--stats.MightIndex];
+							stats.MightScore = stats.Might[--stats.MightIndex];
 						}
 						break;
 				}
-				this.$.mightIndex.innerHTML = stats.MightIndex;
 				if(!stats.MightIndex) {
 					alert("You've died.");
 				}
@@ -48,17 +47,16 @@ Polymer({
 					case "up":
 						console.log("up");
 						if(stats.SpeedIndex < 8) {
-							this.$.speedScore.innerHTML = stats.Speed[++stats.SpeedIndex];
+							stats.SpeedScore = stats.Speed[++stats.SpeedIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
 						if(stats.SpeedIndex > 0) {
-							this.$.speedScore.innerHTML = stats.Speed[--stats.SpeedIndex];
+							stats.SpeedScore = stats.Speed[--stats.SpeedIndex];
 						}
 						break;
 				}
-				this.$.speedIndex.innerHTML = stats.SpeedIndex;
 				if(!stats.SpeedIndex) {
 					alert("You've died.");
 				}
@@ -68,17 +66,16 @@ Polymer({
 					case "up":
 						console.log("up");
 						if(stats.KnowledgeIndex < 8) {
-							this.$.knowledgeScore.innerHTML = stats.Knowledge[++stats.KnowledgeIndex];
+							stats.KnowledgeScore = stats.Knowledge[++stats.KnowledgeIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
 						if(stats.KnowledgeIndex > 0) {
-							this.$.knowledgeScore.innerHTML = stats.Knowledge[--stats.KnowledgeIndex];
+							stats.KnowledgeScore = stats.Knowledge[--stats.KnowledgeIndex];
 						}
 						break;
 				}
-				this.$.knowledgeIndex.innerHTML = stats.KnowledgeIndex;
 				if(!stats.KnowledgeIndex) {
 					alert("You've died.");
 				}
@@ -88,22 +85,23 @@ Polymer({
 					case "up":
 						console.log("up");
 						if(stats.SanityIndex < 8) {
-							this.$.sanityScore.innerHTML = stats.Sanity[++stats.SanityIndex];
+							stats.SanityScore = stats.Sanity[++stats.SanityIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
 						if(stats.SanityIndex > 0) {
-							this.$.sanityScore.innerHTML = stats.Sanity[--stats.SanityIndex];
+							stats.SanityScore = stats.Sanity[--stats.SanityIndex];
 						}
 						break;
 				}
-				this.$.sanityIndex.innerHTML = stats.SanityIndex;
 				if(!stats.SanityIndex) {
 					alert("You've died.");
 				}
 				break;
-		}		
+		}
+
+		this.stats = stats;	
 	},
 
 	clickHandler: function(event, detail) {
@@ -125,14 +123,10 @@ Polymer({
 		selection = this.character;
 		this.setHeader(selection.Color);
 
-		this.$.mightScore.innerHTML = selection.Might[selection.BaseMightIndex];
-		this.$.speedScore.innerHTML = selection.Speed[selection.BaseSpeedIndex];
-		this.$.knowledgeScore.innerHTML = selection.Knowledge[selection.BaseKnowledgeIndex];
-		this.$.sanityScore.innerHTML = selection.Sanity[selection.BaseSanityIndex];
-		// this.$.mightIndex.innerHTML = selection.BaseMightIndex;
-		// this.$.speedIndex.innerHTML = selection.BaseSpeedIndex;
-		// this.$.knowledgeIndex.innerHTML = selection.BaseKnowledgeIndex;
-		// this.$.sanityIndex.innerHTML = selection.BaseSanityIndex;		
+		stats.MightScore = selection.Might[selection.BaseMightIndex];
+		stats.SpeedScore = selection.Speed[selection.BaseSpeedIndex];
+		stats.KnowledgeScore = selection.Knowledge[selection.BaseKnowledgeIndex];
+		stats.SanityScore = selection.Sanity[selection.BaseSanityIndex];	
 
 		stats.Might = selection.Might;
 		stats.Speed = selection.Speed;
@@ -156,6 +150,10 @@ Polymer({
 			"SpeedIndex":"",
 			"KnowledgeIndex":"",
 			"SanityIndex":""
+			"MightScore":"",
+			"SpeedScore":"",
+			"KnowledgeScore":"",
+			"SanityScore":""
 		};
 
 		this.setCardValues();
