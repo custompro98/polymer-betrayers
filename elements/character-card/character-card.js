@@ -3,19 +3,11 @@ Polymer({
 
 	properties: {
 		character: Object,
-		stats: Object
+		stats: {
+			type: Object,
+			notify: true
+		}
 	},
-
-	// stats: {
-	// 	"Might":"",
-	// 	"Speed":"",
-	// 	"Knowledge":"",
-	// 	"Sanity":"",
-	// 	"MightIndex":"",
-	// 	"SpeedIndex":"",
-	// 	"KnowledgeIndex":"",
-	// 	"SanityIndex":""
-	// },
 
 	fullscreen: function() {
 		screenfull.toggle();
