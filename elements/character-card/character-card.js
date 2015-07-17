@@ -3,13 +3,13 @@ Polymer({
 
 	properties: {
 		character: Object,
-		stats: {
-			type: Object,
-			notify: true
-		}
+		// stats: {
+		// 	type: Object,
+		// 	notify: true;
+		// }
 	},
 
-/*	stats: {
+	stats: {
 		"Might":"",
 		"Speed":"",
 		"Knowledge":"",
@@ -18,7 +18,7 @@ Polymer({
 		"SpeedIndex":"",
 		"KnowledgeIndex":"",
 		"SanityIndex":""
-	},*/
+	},
 
 	fullscreen: function() {
 		screenfull.toggle();
@@ -150,16 +150,16 @@ Polymer({
 	attached: function() {
 		self = this;
 
-		this.stats = {
-			"Might":"",
-			"Speed":"",
-			"Knowledge":"",
-			"Sanity":"",
-			"MightIndex":"",
-			"SpeedIndex":"",
-			"KnowledgeIndex":"",
-			"SanityIndex":""
-		};
+		// this.stats = {
+		// 	"Might":"",
+		// 	"Speed":"",
+		// 	"Knowledge":"",
+		// 	"Sanity":"",
+		// 	"MightIndex":"",
+		// 	"SpeedIndex":"",
+		// 	"KnowledgeIndex":"",
+		// 	"SanityIndex":""
+		// };
 
 		this.setCardValues();
 	},
