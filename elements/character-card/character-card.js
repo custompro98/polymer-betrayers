@@ -146,6 +146,18 @@ Polymer({
 
 	attached: function() {
 		self = this;
+
+		this.stats = {
+			"Might":"",
+			"Speed":"",
+			"Knowledge":"",
+			"Sanity":"",
+			"MightIndex":"",
+			"SpeedIndex":"",
+			"KnowledgeIndex":"",
+			"SanityIndex":""
+		};
+
 		this.setCardValues();
 	},
 });
