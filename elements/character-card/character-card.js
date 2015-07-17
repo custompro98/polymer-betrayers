@@ -3,10 +3,7 @@ Polymer({
 
 	properties: {
 		character: Object,
-		// stats: {
-		// 	type: Object,
-		// 	notify: true;
-		// }
+		stats: Object
 	},
 
 	// stats: {
@@ -162,5 +159,6 @@ Polymer({
 		};
 
 		this.setCardValues();
+		this.stats = stats;
 	},
 });
