@@ -2,11 +2,11 @@ Polymer({
 	is: "character-card",
 
 	properties: {
-		character: Object
+		character: Object,
+		stats: Object
 	},
 
-	response: "",
-	character: {
+/*	stats: {
 		"Might":"",
 		"Speed":"",
 		"Knowledge":"",
@@ -15,7 +15,7 @@ Polymer({
 		"SpeedIndex":"",
 		"KnowledgeIndex":"",
 		"SanityIndex":""
-	},
+	},*/
 
 	fullscreen: function() {
 		screenfull.toggle();
@@ -27,19 +27,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.character.MightIndex < 8) {
-							this.$.mightScore.innerHTML = this.character.Might[++this.character.MightIndex];
+						if(this.stats.MightIndex < 8) {
+							this.$.mightScore.innerHTML = this.stats.Might[++this.stats.MightIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.character.MightIndex > 0) {
-							this.$.mightScore.innerHTML = this.character.Might[--this.character.MightIndex];
+						if(this.stats.MightIndex > 0) {
+							this.$.mightScore.innerHTML = this.stats.Might[--this.stats.MightIndex];
 						}
 						break;
 				}
-				this.$.mightIndex.innerHTML = this.character.MightIndex;
-				if(!this.character.MightIndex) {
+				this.$.mightIndex.innerHTML = this.stats.MightIndex;
+				if(!this.stats.MightIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -47,19 +47,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.character.SpeedIndex < 8) {
-							this.$.speedScore.innerHTML = this.character.Speed[++this.character.SpeedIndex];
+						if(this.stats.SpeedIndex < 8) {
+							this.$.speedScore.innerHTML = this.stats.Speed[++this.stats.SpeedIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.character.SpeedIndex > 0) {
-							this.$.speedScore.innerHTML = this.character.Speed[--this.character.SpeedIndex];
+						if(this.stats.SpeedIndex > 0) {
+							this.$.speedScore.innerHTML = this.stats.Speed[--this.stats.SpeedIndex];
 						}
 						break;
 				}
-				this.$.speedIndex.innerHTML = this.character.SpeedIndex;
-				if(!this.character.SpeedIndex) {
+				this.$.speedIndex.innerHTML = this.stats.SpeedIndex;
+				if(!this.stats.SpeedIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -67,19 +67,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.character.KnowledgeIndex < 8) {
-							this.$.knowledgeScore.innerHTML = this.character.Knowledge[++this.character.KnowledgeIndex];
+						if(this.stats.KnowledgeIndex < 8) {
+							this.$.knowledgeScore.innerHTML = this.stats.Knowledge[++this.stats.KnowledgeIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.character.KnowledgeIndex > 0) {
-							this.$.knowledgeScore.innerHTML = this.character.Knowledge[--this.character.KnowledgeIndex];
+						if(this.stats.KnowledgeIndex > 0) {
+							this.$.knowledgeScore.innerHTML = this.stats.Knowledge[--this.stats.KnowledgeIndex];
 						}
 						break;
 				}
-				this.$.knowledgeIndex.innerHTML = this.character.KnowledgeIndex;
-				if(!this.character.KnowledgeIndex) {
+				this.$.knowledgeIndex.innerHTML = this.stats.KnowledgeIndex;
+				if(!this.stats.KnowledgeIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -87,19 +87,19 @@ Polymer({
 				switch(direction) {
 					case "up":
 						console.log("up");
-						if(this.character.SanityIndex < 8) {
-							this.$.sanityScore.innerHTML = this.character.Sanity[++this.character.SanityIndex];
+						if(this.stats.SanityIndex < 8) {
+							this.$.sanityScore.innerHTML = this.stats.Sanity[++this.stats.SanityIndex];
 						}
 						break;
 					case "down":
 						console.log("down");
-						if(this.character.SanityIndex > 0) {
-							this.$.sanityScore.innerHTML = this.character.Sanity[--this.character.SanityIndex];
+						if(this.stats.SanityIndex > 0) {
+							this.$.sanityScore.innerHTML = this.stats.Sanity[--this.stats.SanityIndex];
 						}
 						break;
 				}
-				this.$.sanityIndex.innerHTML = this.character.SanityIndex;
-				if(!this.character.SanityIndex) {
+				this.$.sanityIndex.innerHTML = this.stats.SanityIndex;
+				if(!this.stats.SanityIndex) {
 					alert("You've died.");
 				}
 				break;
@@ -125,29 +125,23 @@ Polymer({
 		selection = this.character;
 		this.setHeader(selection.Color);
 
-		this.$.characterName.innerHTML = selection.Name;
-		this.$.age.innerHTML = selection.Age;
-		this.$.height.innerHTML = selection.Height;
-		this.$.weight.innerHTML = selection.Weight;
-		this.$.birthday.innerHTML = selection.Birthday;
-		this.$.hobbies.innerHTML = selection.Hobbies;
 		this.$.mightScore.innerHTML = selection.Might[selection.BaseMightIndex];
 		this.$.speedScore.innerHTML = selection.Speed[selection.BaseSpeedIndex];
 		this.$.knowledgeScore.innerHTML = selection.Knowledge[selection.BaseKnowledgeIndex];
 		this.$.sanityScore.innerHTML = selection.Sanity[selection.BaseSanityIndex];
-		this.$.mightIndex.innerHTML = selection.BaseMightIndex;
-		this.$.speedIndex.innerHTML = selection.BaseSpeedIndex;
-		this.$.knowledgeIndex.innerHTML = selection.BaseKnowledgeIndex;
-		this.$.sanityIndex.innerHTML = selection.BaseSanityIndex;		
+		// this.$.mightIndex.innerHTML = selection.BaseMightIndex;
+		// this.$.speedIndex.innerHTML = selection.BaseSpeedIndex;
+		// this.$.knowledgeIndex.innerHTML = selection.BaseKnowledgeIndex;
+		// this.$.sanityIndex.innerHTML = selection.BaseSanityIndex;		
 
-		this.character.Might = selection.Might;
-		this.character.Speed = selection.Speed;
-		this.character.Knowledge = selection.Knowledge;
-		this.character.Sanity = selection.Sanity;
-		this.character.MightIndex = selection.BaseMightIndex
-		this.character.SpeedIndex = selection.BaseSpeedIndex
-		this.character.KnowledgeIndex = selection.BaseKnowledgeIndex
-		this.character.SanityIndex = selection.BaseSanityIndex
+		this.stats.Might = selection.Might;
+		this.stats.Speed = selection.Speed;
+		this.stats.Knowledge = selection.Knowledge;
+		this.stats.Sanity = selection.Sanity;
+		this.stats.MightIndex = selection.BaseMightIndex
+		this.stats.SpeedIndex = selection.BaseSpeedIndex
+		this.stats.KnowledgeIndex = selection.BaseKnowledgeIndex
+		this.stats.SanityIndex = selection.BaseSanityIndex
 	},
 
 	attached: function() {
