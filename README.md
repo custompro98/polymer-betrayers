@@ -6,7 +6,7 @@ Then you know how irritating it is to manage the bulit in character cards.
 Look for an app to manage it for you.  You find a few options, sure, but most are ugly and built on old frameworks.
 
 ###What's worse? 
-Probaly not even open source.
+Probaly not even open source!
 
 ###How am I supposed to play my custom characters if I can't edit the source?
 Short answer: you can't.
