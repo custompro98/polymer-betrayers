@@ -21,6 +21,7 @@ Polymer({
 						console.log("up");
 						if(stats.MightIndex < 8) {
 							stats.MightScore = stats.Might[++stats.MightIndex];
+							this.set(stats.MightScore, stats.Might[stats.MightIndex]);
 						}
 						break;
 					case "down":
@@ -92,8 +93,6 @@ Polymer({
 				}
 				break;
 		}
-		
-		this.$.character-card.render();
 	},
 
 	clickHandler: function(event, detail) {
