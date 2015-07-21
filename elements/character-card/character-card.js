@@ -21,7 +21,6 @@ Polymer({
 						console.log("up");
 						if(stats.MightIndex < 8) {
 							stats.MightScore = stats.Might[++stats.MightIndex];
-							this.set("stats.MightScore", "stats.Might[MightIndex]");
 						}
 						break;
 					case "down":
@@ -34,6 +33,8 @@ Polymer({
 				if(!stats.MightIndex) {
 					alert("You've died.");
 				}
+				this.set("stats.MightScore", stats.Might[MightIndex]);
+				this.set("stats.MightIndex", stats.MightIndex);
 				break;
 			case "speed":
 				switch(direction) {
@@ -53,6 +54,8 @@ Polymer({
 				if(!stats.SpeedIndex) {
 					alert("You've died.");
 				}
+				this.set("stats.SpeedScore", stats.Speed[SpeedIndex]);
+				this.set("stats.SpeedIndex", stats.SpeedIndex);
 				break;
 			case "knowledge":
 				switch(direction) {
@@ -72,6 +75,8 @@ Polymer({
 				if(!stats.KnowledgeIndex) {
 					alert("You've died.");
 				}
+				this.set("stats.KnowledgeScore", stats.Knowledge[KnowledgeIndex]);
+				this.set("stats.KnowledgeIndex", stats.KnowledgeIndex);
 				break;
 			case "sanity":
 				switch(direction) {
@@ -91,6 +96,8 @@ Polymer({
 				if(!stats.SanityIndex) {
 					alert("You've died.");
 				}
+				this.set("stats.SanityScore", stats.Sanity[SanityIndex]);
+				this.set("stats.SanityIndex", stats.SanityIndex);
 				break;
 		}
 	},
