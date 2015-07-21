@@ -33,7 +33,7 @@ Polymer({
 				if(!stats.MightIndex) {
 					alert("You've died.");
 				}
-				this.set("stats.MightScore", stats.Might[MightIndex]);
+				this.set("stats.MightScore", stats.Might[stats.MightIndex]);
 				this.set("stats.MightIndex", stats.MightIndex);
 				break;
 			case "speed":
@@ -54,7 +54,7 @@ Polymer({
 				if(!stats.SpeedIndex) {
 					alert("You've died.");
 				}
-				this.set("stats.SpeedScore", stats.Speed[SpeedIndex]);
+				this.set("stats.SpeedScore", stats.Speed[stats.SpeedIndex]);
 				this.set("stats.SpeedIndex", stats.SpeedIndex);
 				break;
 			case "knowledge":
@@ -75,7 +75,7 @@ Polymer({
 				if(!stats.KnowledgeIndex) {
 					alert("You've died.");
 				}
-				this.set("stats.KnowledgeScore", stats.Knowledge[KnowledgeIndex]);
+				this.set("stats.KnowledgeScore", stats.Knowledge[stats.KnowledgeIndex]);
 				this.set("stats.KnowledgeIndex", stats.KnowledgeIndex);
 				break;
 			case "sanity":
@@ -96,7 +96,7 @@ Polymer({
 				if(!stats.SanityIndex) {
 					alert("You've died.");
 				}
-				this.set("stats.SanityScore", stats.Sanity[SanityIndex]);
+				this.set("stats.SanityScore", stats.Sanity[stats.SanityIndex]);
 				this.set("stats.SanityIndex", stats.SanityIndex);
 				break;
 		}
