@@ -92,6 +92,8 @@ Polymer({
 				}
 				break;
 		}
+		
+		this.$.character-card.render();
 	},
 
 	clickHandler: function(event, detail) {
