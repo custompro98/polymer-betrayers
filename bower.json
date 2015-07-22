@@ -1,7 +1,7 @@
 {
   "name": "polymer-character-card",
   "main": "index.js",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/custompro98/polymer-character-card",
   "authors": [
     "Mitch <mitchjoa@gmail.com>"
